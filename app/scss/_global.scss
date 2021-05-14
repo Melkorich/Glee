@@ -1,4 +1,18 @@
 
 body {
- 
+ font-size: 16px;
+ font-weight: 400;
+ font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container--big {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
