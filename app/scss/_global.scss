@@ -16,3 +16,9 @@ body {
 .container--big {
   max-width: 1800px;
 }
+
+.logo__img {
+  min-width: 146px;
+  min-height: 39px;
+  object-fit: contain;
+}
