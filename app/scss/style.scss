@@ -14,18 +14,25 @@
   align-items: center;
 }
 
+.header__logo {
+  margin-right: 150px;
+}
+
 .menu {
   &__list {
     display: flex;
+    text-align: left;
   } 
   &__item:not(:last-child) {
     margin-right: 35px;
   }
   &__link {
-    color: red;
+    color: $color-nav;
     font-size: 15px;
     line-height: 1.3;
-    font-weight: 500;
+    font-weight: 700;
+    @extend %rubik-700;
+    /*тут получается шрифт не медиум, а болд!*/
   } 
 }
 
@@ -34,24 +41,24 @@
   justify-content: space-between;
   align-items: center;
   &__search {
-    background-color: #a3bbc8;
+    background-color: #edf1f4;
     padding: 18px;
     border-radius: 50px;
     margin-right: 20px;
+    border: transparent;
   }
   &__select {
     display: flex;
     background-color: #fcd7b6;
-    padding: 20px 40px 13px;
     border-radius: 50px;
     margin-right: 20px;
   }
   .user__link--heart {
     border-right: 1px solid #fde7d3;
-    padding-right: 20px;
+    padding: 22px 30px 12px 41px;
   }
   .user__link--basket {
-    padding-left: 20px;
+    padding: 21px 42px 13px 27px;
   }
   &__navig {
     background-color: #a3bbc8;
@@ -69,17 +76,16 @@
     font-weight: 400;
     border-radius: 50%;
     background-color: #fff;
-    top: -10px;
-    right: -9px;
+    top: 15px;
+    right: 20px;
     padding: 5px 4px;
     text-align: center;
     line-height: 1;
   }
-  .user__num--heart {
-    right: 10px;
+  .user__num--basket {
+    right: 30px;
   }
 }
-
 
 
 

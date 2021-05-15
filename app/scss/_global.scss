@@ -2,7 +2,9 @@
 body {
  font-size: 16px;
  font-weight: 400;
- font-family: 'Rubik', sans-serif;
+ font-style: normal;
+ line-height: 1.2;
+ @extend %rubik-400;
 }
 
 .container {
@@ -13,6 +15,4 @@ body {
 
 .container--big {
   max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
