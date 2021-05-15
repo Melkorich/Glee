@@ -43,9 +43,10 @@
   &__search {
     background-color: #edf1f4;
     padding: 18px;
-    border-radius: 50px;
+    border-radius: 50%;
     margin-right: 20px;
     border: transparent;
+    transition: border 0.5s;
   }
   &__select {
     display: flex;
