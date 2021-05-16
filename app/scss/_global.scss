@@ -38,3 +38,11 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.title {
+  font-size: 36px;
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  color: $color-second-title;
+}
