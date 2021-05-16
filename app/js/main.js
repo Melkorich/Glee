@@ -1,5 +1,10 @@
 $(function(){
   
+
+  $('.product-slider').slick({
+
+  });
+
 });
 
 

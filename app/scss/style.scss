@@ -32,10 +32,16 @@
     border-bottom: 1px solid transparent;
     transition: color 0.6s, border-bottom 1s;
     @extend %rubik-700;
+    outline: transparent;
     /*тут получается шрифт не медиум, а болд!*/
+    &:focus {
+      border-bottom: 1px solid $color-main-title;
+    }
     &:hover {
       color:$color-main-title;
-      border-bottom: 1px solid $color-main-title;
+    }
+    &:active {
+      border-bottom: 1px solid $color-nav;
     }
   } 
 }
@@ -66,7 +72,7 @@
     background-color: $color-bg;
     border: transparent;
     position: relative;
-    padding: 13px 30px 13px 40px;
+    padding: 20px 30px 12px 40px;
     border-radius: 30px 0 0 30px;
     border-right: 1px solid rgba($color-white, 0.5);
     transition: background-color 1s;
@@ -82,7 +88,7 @@
     background-color: $color-bg;
     border: transparent;
     position: relative;
-    padding: 13px 40px 13px 27px;
+    padding: 20px 40px 12px 27px;
     border-radius: 0 30px 30px 0;
     transition: background-color 1s;
     margin-right: 18px;
@@ -127,48 +133,116 @@
   }
 }
 
+.product-slider {
+  background-image: url('../images/slider-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 225px 0 281px;
+  }
+  &__content {
+    max-width: 470px;
+    width: 100%;
+  }
+  &__title {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    color: $color-titles;
+    text-transform: uppercase;
+  }
+  &__text {
+    color: $color-nav;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 40px;
+    max-width: 370px;
+  }
+  &__btn {
+    max-width: 200px;
+    padding: 21px 105px 21px 27px;
+    background-color: $color-general;
+    border: transparent;
+    outline: transparent;
+  }
+  &__info {
+    font-size: 15px;
+    line-height: 1.25;
+    color: $color-white;
+    position: relative;
+    &::after {
+      content:"";
+      position: absolute;
+      background-image: url('../images/icons/arrow-right.svg');
+      right: -87px;
+      bottom: 3px;
+      width: 22px;
+      height: 9px;
+    }
+  }
+  &__img {
+    width: 640px;
+    height: 264px;
+  }
+}
+
+.customer {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: rgba($color-bg, 0.2);
+  &__item {
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 30px 0 46px 80px;
+  }
+  &__title {
+    color: $color-small-titles;
+    @extend %dmsans-700;
+    font-family: "DM Sans" sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.2;
+    position: relative;
+    &::before {
+      content:"";
+      position: absolute;
+      left: -84px;
+      top: 3px;
+
+    }
+    &--support::before {
+      background-image:url('../images/support.svg');
+      width: 52px;
+      height: 54px;
+      
+    }
+    &--delivery::before {
+      background-image:url('../images/delivery.svg');
+      width: 55px;
+      height: 37px;
+    }
+    &--payment::before {
+      background-image:url('../images/payment.svg');
+      width: 54px;
+      height: 53px;
+    }
+  }
+ 
 
 
-  // &__select {
-  //   display: flex;
-  //   background-color: #fcd7b6;
-  //   border-radius: 50px;
-  //   margin-right: 20px;
-  // }
-  // .user__link--heart {
-  //   border-right: 1px solid #fde7d3;
-  //   padding: 22px 30px 12px 41px;
-  // }
-  // .user__link--basket {
-  //   padding: 21px 42px 13px 27px;
-  // }
-  // &__navig {
-  //   background-color: #a3bbc8;
-  //   padding: 15px;
-  //   border-radius: 50px;
-  // }
-  // .user__link {
-  //   position: relative;
-  // }
-  // .user__num {
-  //   position: absolute;
-  //   width: 16px;
-  //   height: 16px;
-  //   font-size: 12px;
-  //   font-weight: 400;
-  //   border-radius: 50%;
-  //   background-color: #fff;
-  //   top: 15px;
-  //   right: 20px;
-  //   padding: 5px 4px;
-  //   text-align: center;
-  //   line-height: 1;
-  // }
-  // .user__num--basket {
-  //   right: 30px;
-  // }
 
 
+  &__text {
+    font-family: "DM Sans" sans-serif;
+    line-height: 1.9;
+    color: $color-small-text;
+    width: 212px;
+  }
+}
 
 
 

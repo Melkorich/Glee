@@ -4,6 +4,7 @@ body {
  font-weight: 400;
  font-style: normal;
  line-height: 1.2;
+ letter-spacing: normal;
  @extend %rubik-400;
 }
 
@@ -15,10 +16,25 @@ body {
 
 .container--big {
   max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .logo__img {
   min-width: 146px;
   min-height: 39px;
   object-fit: contain;
+}  
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
