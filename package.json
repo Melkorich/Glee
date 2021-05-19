@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d app"
-
   },
   "author": "Kirill Lavrov",
   "license": "ISC",
@@ -20,5 +19,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }
