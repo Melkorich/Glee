@@ -17,9 +17,11 @@
   display: flex;
   margin: 0 auto;
   padding-left: 150px;
+
   &__item:not(:last-child) {
     margin-right: 30px;
   }
+
   &__link {
     color: $color-nav;
     font-size: 15px;
@@ -30,17 +32,19 @@
     transition: background-color 1s, border-radius 0.6s, color 0.6s;
     @extend %rubik-700;
     outline: transparent;
+
     &:focus {
       background-color:$blue-grey;
       color: $white;
     }
+
     &:hover {
       background-color:$blue-grey;
     }
+
     &:active {
       background-color:$blue-grey;
       border-radius: 25px;
-      
     }
   } 
 }
@@ -57,20 +61,24 @@
     margin-right: 20px;
     border: transparent;
     background-image: none;
-    transition: background-color 1s, fill 1s, transform 1s ease-in-out, background-image 0.6s;
+    transition: background-color 1s, fill 1s, background-image 1s;
+    outline: transparent;
+
     &:focus {
-      animation-iteration-count: infinite;
-      background-image: radial-gradient(circle, rgb(224, 227, 238) 0%, rgb(59, 83, 95) 100%);
+      background-image:radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(163,187,200,1) 73%);
     }
+
     &:hover {
       background-color: $dark-blue;
       &:hover path {
         fill:#edf1f4;
       }
     }
+
     &:active {
-      background-image: radial-gradient(circle, rgba(215,217,227,1) 0%, rgba(36,63,77,1) 100%);
+      background-image: radial-gradient(circle, rgba(163,187,200,1) 0%, rgba(36,63,77,1) 100%);
     }
+
     .search-icon {
       width: 16px;
       height: 16px;
@@ -84,15 +92,30 @@
     padding: 20px 30px 12px 40px;
     border-radius: 30px 0 0 30px;
     border-right: 1px solid rgba($white, 0.5);
-    transition: background-color 1s;
+    transition: background-color 1s, fill 1s;
+    outline: transparent;
+
     & svg {
       width: 18px;
       height: 17px;
     }
+
+    &:focus {
+      background-color: rgb(235, 172, 117);
+      path {
+        fill: #edf1f4;
+      }
+    }
+
     &:hover {
       background-color: rgb(234, 161, 96);
     }
+
+    &:active path {
+      fill: #edf1f4;
+    }
   }
+  
 
   &__basket {
     background-color: $orange-bg;
@@ -100,14 +123,28 @@
     position: relative;
     padding: 20px 40px 12px 27px;
     border-radius: 0 30px 30px 0;
-    transition: background-color 1s;
+    transition: background-color 1s, fill 1s;
     margin-right: 18px;
+    outline: transparent;
+
     & svg {
       width: 19px;
       height: 17px;
     }
+
+    &:focus {
+      background-color: rgb(231, 179, 133);
+      path {
+        fill: #edf1f4;
+      }
+    }
+
     &:hover {
       background-color: rgb(234, 161, 96);
+    }
+
+    &:active path {
+      fill: #edf1f4;
     }
   }
 
@@ -126,27 +163,42 @@
     border-radius: 50%;
     font-size: 10px;
     line-height: 1;
-
   }
 
   &__navigation {
-    width: 51px;
-    height: 52px;
-    padding: 15px 15px 16px 16px;
-    background-color: #a3bbc8;
-    border-radius: 50%;
-    border: transparent;
+  width: 51px;
+  height: 52px;
+  padding: 15px 15px 16px 16px;
+  background-color: #a3bbc8;
+  border-radius: 50%;
+  border: transparent;
+  transition: background-image 1s, fill 1s;
+  outline: transparent;
+
     & svg {
       width: 20px;
       height: 21px;
     }
+
+    &:focus {
+      background-image:radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(163,187,200,1) 73%);
+      & path {
+        fill: $dark-blue;
+      }
+    }
+
     &:hover path{
       fill: $dark-blue;
     }
+
+    &:active path{
+      fill: $orange-bg;
+    }
   }
 }
-
+      
 /*header end*/
+
 
 /*footer start*/
 
@@ -154,33 +206,41 @@
   color: #7b7b7b;
   font-size: 14px;
   line-height: 1.7;
+
   &__top {
   padding: 80px 0 70px;
   border-bottom: 1px solid $blue-grey;
   }
+
   &__list {
   display: flex;
   }
+
   &__address {
   width: 270px;
   margin-right: 30px;
   }
+
   &__logo {
   margin-bottom: 25px;
   display: block;
   }
+
   &__text {
   max-width: 200px;
   width: 100%;
+
   & p:first-child,
   & p:nth-child(2) {
     margin-bottom: 15px;
     }
   }
+
   &__item {
   width: 170px;
   margin-right: 130px;
   }
+
   &__title {
   @extend %dmsans-700;
   color: $color-footer-title;
@@ -188,11 +248,13 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   }
+
   &__services {
   li:not(:last-child) {
     margin-bottom: 10px;
     }
   }
+
   &__newsletter {
   max-width: 270px;
   width: 100%;
@@ -214,6 +276,7 @@
     border: transparent;
     padding: 14px 16px;
     @extend %dmsans-400;
+    margin-right: -4px;
     &::placeholder {
       font-size: 12px;
       color: #234969;
@@ -221,13 +284,14 @@
       font-weight: 400;
     }
   } 
+
   &__subscribe {
     max-width: 100px;
     background-color: $blue-grey;
     border: transparent;
     outline: transparent;
     font-size: 14px;
-    padding: 8px 19px 7px 16px;
+    padding: 7px 19px 7px 16px;
     color: $white;
     @extend %dmsans-400;
   }
@@ -240,14 +304,15 @@
   color: #7b7b7b;
   font-size: 14px;
   line-height: 2;
-  padding: 35px 0;
+  padding: 25px 0;
+
   &__list {
     display: flex;
     li {
       padding: 0 10px;
     }
     li:not(:last-child) {
-      padding-right: 10px;
+      padding-right: 15px;
       border-right: 1px solid #7b7b7b;
     }
   }
@@ -267,34 +332,35 @@
   position: relative;
   max-height: 800px;
   padding: 215px 15px 270px;
-    &__wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
 
-    &__content {
-      max-width: 470px;
-      width: 100%;
-    }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__title {
-      max-width: 470px;
-      font-size: 72px;
-      @extend %rubik-700;
-      line-height: 1;
-      color: $dark-blue;
-      text-transform: uppercase;
-      margin-bottom: 40px;
-    }
+  &__content {
+    max-width: 470px;
+    width: 100%;
+  }
 
-    &__text {
-      color: $color-nav;
-      font-size: 18px;
-      line-height: 2;
-      margin-bottom: 30px;
-      max-width: 370px;
-    }
+  &__title {
+    max-width: 470px;
+    font-size: 72px;
+    @extend %rubik-700;
+    line-height: 1;
+    color: $dark-blue;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: $color-nav;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 30px;
+    max-width: 370px;
+  }
 
   &__btn {
     max-width: 200px;
@@ -303,16 +369,17 @@
     position: relative;
     border: transparent;
     outline: transparent;
-    transition: background-color 1s;
+    transition: background-color 1s, color 0.5s, background-image 1s, border-radius 0.8s;
     &:focus {
-
+      color: $white;
     }
     &:hover {
       background-color: $dark-blue;
       color: $orange-bg;
     }
     &:active {
-
+      color: $white;
+      border-radius: 25px;
     }
     &__info {
       font-size: 15px;
@@ -454,7 +521,7 @@
     border: transparent;
   }
 
-  &__btn--active {
+  .mixitup-control-active {
     color: $color-second-title;
   }
 
@@ -519,22 +586,40 @@
   }
   &-btn--basket {
     background-color: $blue-grey;
+    border: transparent;
     transition: background-color 1s, fill 1s;
+    &:focus {
+      visibility: visible;
+      border: 1px solid  $blue-grey;
+    }
     &:hover{
       background-color: $white;
     }
     &:hover path {
       fill: $blue-grey;
     }
+    &:active path{
+      fill: $orange-bg {
+      }
+    }
   }
   &-btn--search,
   &-btn--heart {
+    border: transparent;
     transition: background-color 1s, fill 1s;
+    &:focus {
+      visibility: visible;
+      border: 1px solid  $blue-grey;
+    }
     &:hover {
       background-color: $blue-grey;
     }
     &:hover path {
       fill:$white;
+    }
+    &:active path{
+      fill: $orange-bg {
+      }
     }
   }
     
