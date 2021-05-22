@@ -3,6 +3,7 @@ $white: #ffffff;
 $orange-bg: #fcd7b6;
 $dark-blue: #243f4d;
 $color-nav: #436372;
+$circle-btn: #edf1f4;
 $color-main-title: #1a1a1a;
 $color-second-title: #191919;
 $color-small-titles: #414141;
@@ -49,4 +50,19 @@ $color-footer-title: #1f2044;
 %myriad-pro-400 {
   font-family: 'myriad-pro-Regular';
   font-weight: 400;
+}
+
+%btn {
+  transition: background-color 1s, color 0.5s, background-image 1s, border-radius 0.8s;
+  &:focus {
+    background-color: $dark-blue;
+    color: $orange-bg;
+  }
+  &:hover {
+    background-color: $color-nav;
+    color: $white;
+  }
+  &:active {
+    color: $orange-bg;
+  }
 }
