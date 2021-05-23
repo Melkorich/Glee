@@ -28,11 +28,13 @@ function styles(){
     .pipe(browserSync.stream())
 }
 
+
+// .pipe(concat('node_modules/animate.css/animate.css'))
+
 function scripts(){
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/animate.css/animate.css',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
