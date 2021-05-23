@@ -52,13 +52,63 @@ body {
   font-family: 'DMSans', sans-serif;
   font-weight: 700;
   line-height: normal;
-  color: $color-second-title;
+  color: $balck1;
 }
+
+.btn-main {
+  max-width: 200px;
+  padding: 21px 101px 21px 27px;
+  background-color: $grey1;
+  position: relative;
+  border: transparent;
+  outline: transparent;
+  font-size: 15px;
+  line-height: 1.25;
+  color: $white1;
+  position: relative;
+  &::after{
+    content:"";
+    position: absolute;
+    z-index: 5;
+    background-image: url('../images/icons/arrow-right.svg');
+    right: 15px;
+    transform: translateY(-50%, -50%);
+    width: 22px;
+    height: 9px;
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__btn {
+    color: $grey2;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    border: transparent;
+  }
+}
+
+
+
+
+
+
 
 @mixin overflow {
   text-overflow: hidden;
   line-clamp: 2;
 }
+
+
+
+
+
 
 
 /*animation*/
@@ -71,7 +121,7 @@ body {
 
   &:focus {
     background-color: $grey1;
-    color: $color-second-title;
+    color: $red6;
   }
   
   &:hover {
@@ -99,7 +149,6 @@ body {
 
   &:hover {
     background-color: rgb(226, 141, 66);
-    // background-color: $grey1;
   }
 
   &:active {
