@@ -429,8 +429,14 @@
       z-index: 9;
       background-repeat: no-repeat;
       background-size: cover;
+      transition: transform 1s;
+    }
+    &:hover::before {
+      transform: translateX(-50%);
     }
   }
+  
+  
 
   &__content--lamp::before {
     background-image:url('../images/lamp1.png');
@@ -460,7 +466,7 @@
   &__btn {
     background-color: transparent;
     border: 1px solid #436372;
-    padding: 24px 84px 25px 20px;
+    padding: 21px 10px 21px 10px;
     font-family: 'Rubik';
     font-weight: 500;
     line-height: 1;
@@ -468,15 +474,75 @@
     border-radius: 5px;
     max-width: 180px;
     max-height: 60px;
+    display: inline-block;
     color: $blue2;
-    @extend %btn;
-    &::after {
-      background-image: url('../images/icons/arrow-right-black.svg');
-    }
+    @extend %btn-2;
+  }
+  &__img {
+    padding-left: 40px;
   }
 }
 
 /*products end*/ 
+
+/*design start*/
+
+.design {
+  padding-bottom: 120px;
+  text-align: center;
+  &__title {
+    margin-bottom: 29px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 34px 30px;
+  }
+}
+
+.design-item {
+  background-color: #f8f8f8;
+  max-width: 370px;
+  width: 100%;
+  min-height: 246px;
+  text-align: left;
+  padding: 30px 38px;
+  font-family: 'DMSans';
+  font-weight: 700;
+  position: relative;
+  background-position: right bottom 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 1s;
+  &:hover {
+    background-color: $orange-bg;
+    .design-item__title {
+      transform: scale(1.2);
+    }
+  }
+
+  &__title {
+    max-width: 171px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: $black2;
+    transition: transform 0.6s;
+  }
+
+  &__type {
+    color: $grey1;
+  }
+
+  &--chair {
+    background-position: center right 20px;
+  }
+}
+
+/*design end*/
+
+
+
 
 
 

@@ -57,24 +57,20 @@ body {
 
 .btn-main {
   max-width: 200px;
-  padding: 21px 101px 21px 27px;
+  padding: 21px 17px 21px 27px;
   background-color: $grey1;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.25;
   position: relative;
   border: transparent;
   outline: transparent;
-  font-size: 15px;
-  line-height: 1.25;
   color: $white1;
-  position: relative;
-  &::after{
-    content:"";
-    position: absolute;
-    z-index: 5;
-    background-image: url('../images/icons/arrow-right.svg');
-    right: 15px;
-    transform: translateY(-50%, -50%);
-    width: 22px;
-    height: 9px;
+  display: inline-block;
+  @extend %btn;
+  &__img {
+    padding-left: 60px;
   }
 }
 
