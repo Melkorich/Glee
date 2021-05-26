@@ -5,6 +5,14 @@ $(function(){
     arrows: false,
     dots: true,
   });
+
+  $('.partners-slider').slick({
+    arrows: false,
+    donts:false,
+    autoplay: true,
+    centerMode: true,
+    slidesToShow: 4,
+  });
   
 
 
