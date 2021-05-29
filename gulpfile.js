@@ -1,11 +1,27 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 const scss = require('gulp-sass');
+const notify = require('gulp-notify');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const del = require('del')
+const del = require('del');
 const browserSync = require('browser-sync').create();
+const fileinclude = require('gulp-file-include');
+const svgSprite = require('gulp-svg-sprite');
+
+
+function svgSprites(){
+  return src('app/images/pre-sprites/**.svg')
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: '../sprite.svg'
+        }
+      }
+    }))
+    .pipe(dest('app/images/sprites'))
+}
 
 function browsersync(){
   browserSync.init({
@@ -18,7 +34,8 @@ function browsersync(){
 
 function styles(){
   return src('app/scss/style.scss')
-    .pipe(scss({outputStyle:'compressed'}))
+    .pipe(scss({outputStyle:'compressed'})
+      .on('error', notify.onError()))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
@@ -28,10 +45,14 @@ function styles(){
     .pipe(browserSync.stream())
 }
 
+// .pipe(concat('node_modules/animate.css/animate.css'))
+
 function scripts(){
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -69,10 +90,24 @@ function cleanDist(){
   return del('dist')
 }
 
+function htmlInclude() {
+  return src('app/html/*.html')
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@file'
+  }))
+  .pipe(dest('./app'))
+  .pipe(browserSync.stream());
+}
+
+
+
 
 function watching(){
   watch(['app/scss/**/*.scss'], styles);
+  watch(['./src/*.html'], htmlInclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['app/images/pre-sprites/**.svg'], svgSprites);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -82,7 +117,8 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
+exports.fileinclude = htmlInclude;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(htmlInclude, styles, scripts, svgSprites, browsersync, watching);

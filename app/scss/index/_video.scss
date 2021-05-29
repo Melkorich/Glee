@@ -1,0 +1,23 @@
+.video {
+  
+  background-position:center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  height: 501px;
+  min-width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 120px;
+
+  &:before {
+    content:'';
+    position: absolute;
+    background-image:url('../images/video/play.svg');
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 127px;
+    height: 127px;
+  }
+}

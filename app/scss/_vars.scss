@@ -1,52 +1,95 @@
-$blue-grey: #a3bbc8;
-$white: #ffffff;
+$grey1: #a3bbc8;
+$grey2: #8b8b8b;
+$grey8: #7b7b7b;
+$grey7: #585858;
+
+$white1: #ffffff;
+$white2: #edf1f4;
+
 $orange-bg: #fcd7b6;
-$dark-blue: #243f4d;
-$color-nav: #436372;
-$color-main-title: #1a1a1a;
-$color-second-title: #191919;
-$color-small-titles: #414141;
-$color-small-text: #585858;
-$color-filter: #8b8b8b;
-$color-footer-title: #1f2044;
+
+$blue1: #243f4d;
+$blue2: #436372;
+
+$balck1: #191919;
+$black2: #1a1a1a;
+
+$purple5: #1f2044;
+
+$red9: #414141;
+$red6: #523e3e;
 
 
-
-%dmsans-400 {
-  font-family: 'DMSans-Regular';
-  font-weight: 400;
+%btn {
+  transition: background-color 1s, color 0.5s, background-image 1s, border-radius 0.8s, opacity 0.1s;
+  &:focus {
+    background-color: $blue2;
+    color: $orange-bg;
+  }
+  &:hover {
+    background-color: $blue1;
+    color: $orange-bg;;
+    & path {
+      fill: $orange-bg;
+    }
+  }
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-%dmsans-500 {
-  font-family: 'DMSans-Medium';
-  font-weight: 500;
+%btn-2 {
+  transition: background-color 1s, color 0.5s, background-image 1s, border-radius 0.8s, opacity 0.1s;
+  &:focus {
+    background-color: $blue2;
+    color:  $orange-bg;
+    path {
+      fill: $white1;
+    }
+  }
+  &:hover {
+    background-color: $blue1;
+    color: $orange-bg;
+    path {
+      fill: $orange-bg;
+    }
+  }
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-%dmsans-700 {
-  font-family: 'DMSans-Bold';
-  font-weight: 700;
+%circle-btn {
+  transition: background-color 1s;
+  path {
+    transition: fill 0.6s;
+  }
+
+  &:focus {
+    background-color: $grey1;
+    path {
+      fill: $white1;
+    }
+  }
+
+  &:hover {
+    background-color: $grey1;
+    path {
+      fill: $white1;
+    }
+  }
+
+  &:active {
+    path {
+      fill: $orange-bg;
+    }
+  }
+
 }
 
-
-
-%rubik-400 {
-  font-family: 'Rubik-Regular';
-  font-weight: 400;
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
 }
-
-%rubik-500 {
-  font-family: 'Rubik-Medium';
-  font-weight: 500;
-}
-
-%rubik-700 {
-  font-family: 'Rubik-Bold';
-  font-weight: 700;
-}
-
-
-
-%myriad-pro-400 {
-  font-family: 'myriad-pro-Regular';
-  font-weight: 400;
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }

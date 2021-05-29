@@ -1,0 +1,111 @@
+
+.main-slider {
+  
+  &__inner {
+    background-image: url('../images/main-slider/main-slider-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    position: relative;
+    min-height: 820px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    @include flexible ();
+    position: relative;
+  }
+
+  &__wrapper::after {
+    content:'';
+    position: absolute;
+    width: 640px;
+    height: 634px;
+    background-image: url('../images/main-slider/main-slider-product-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    right: -110px;
+    z-index: -1;
+  }
+
+  &__content {
+    max-width: 470px;
+    min-height: 400px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__title {
+    max-width: 470px;
+    font-size: 72px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    color: $blue1;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include overflow;
+  }
+
+  &__text p {
+    color: $blue2;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 370px;
+  }
+
+  &__image {
+    max-width: 640px;
+    height: 634px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .slick-dots {
+    position: absolute;
+    width: 30px;
+    height: 29px;
+    bottom: 30px;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    li {
+      padding: 0 5px;
+      button {
+        background-color: $white1;
+        opacity: 0.3;
+        border-radius: 50%;
+        border: transparent;
+        padding: 10px 12px;
+        font-size: 11px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        line-height: 1;
+        transition: background-color 0.6s, border 0.6s;
+      }
+    }
+    .slick-active button{
+      opacity: 1;
+      background-color: $white1;
+      transition: 0.6s;
+    }
+  
+    button:focus {
+      background-color: $white1;
+    }
+    button:hover {
+      background-color: $blue1;
+      color: $white1;
+    }
+    button:active {
+      background-color: rgb(234, 161, 96);
+      color: $black2;
+    }
+  }
+}
