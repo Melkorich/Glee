@@ -26,13 +26,11 @@ body {
   }
 }
 
-
 .logo__img {
   max-width: 146px;
   max-height: 39px;
   object-fit: contain;
 }  
-
 
 .sr-only {
   position: absolute;
@@ -90,15 +88,11 @@ body {
   }
 }
 
-
 @mixin flexible () {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-
-
 
 @mixin overflow {
   text-overflow: hidden;

@@ -10,27 +10,9 @@ $(function(){
     arrows: false,
     donts:false,
     autoplay: true,
-    centerMode: true,
+    centerMode: false,
     slidesToShow: 4,
   });
-  
-
-
-  
-  // var mixer = mixitup('.design__items');
-
-
-  // $('#products__filters').mixItUp({
-  //   selectors: {
-  //     filter: '.filter__btn'
-  //   }
-  // });
-
-  // $('#design__filter').mixItUp({
-  //   selectors: {
-  //     filter: '.design__btn'
-  //   }
-  // });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');

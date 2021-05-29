@@ -1,0 +1,127 @@
+.footer {
+  color: $grey8;
+  font-size: 14px;
+  line-height: 1.7;
+
+  &__top {
+    padding: 80px 0 70px;
+    border-bottom: 1px solid $grey1;
+    display: flex;
+    min-height: 350px;
+  }
+
+  &__address {
+    width: 270px;
+    margin-right: 30px;
+    font-style: normal;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+    display: block;
+  }
+
+  &__adress-info {
+    max-width: 200px;
+    width: 100%;
+    line-height: 1.7;
+  }
+
+  &__address-link,
+  &__address-tel {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  &__address-name,
+  &__address-tel,
+  &__mail {
+    text-transform: uppercase;
+  }
+
+  &__items {
+    width: 270px;
+    margin-right: 30px;
+    align-items:flex-end;
+    padding-top: 15px;
+  }
+
+  &__title {
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    color: $purple5;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__newsletter {
+    max-width: 270px;
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  &__newsletter-title {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  &__newsletter-text {
+    line-height: 1.7;
+    margin-bottom: 38px;
+  }
+
+  .form__field {
+    max-width: 166px;
+    width: 100%;
+    height: 38px;
+    background-color: #fcd7b6;
+    opacity: 0.2;
+    border: transparent;
+    padding: 14px 16px;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 400;
+    margin-right: -4px;
+    &::placeholder {
+      font-size: 12px;
+      color: #234969;
+      opacity: 1;
+    }
+  } 
+
+  &__subscribe {
+    max-width: 100px;
+    background-color: $grey1;
+    border: transparent;
+    outline: transparent;
+    font-size: 14px;
+    padding: 7px 19px 7px 16px;
+    color: $white1;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 400;
+    @extend %btn;
+  }
+
+  &__bottom {
+    @include flexible ();
+    line-height: 2;
+    padding: 25px 0;
+  }
+
+  &__bottom-list {
+    display: flex;
+  }
+
+  &__bottom-item {
+    padding: 0 10px;
+  }
+  
+  &__bottom-item:not(:last-child) {
+    padding-right: 15px;
+    border-right: 1px solid $grey8;
+  }
+}

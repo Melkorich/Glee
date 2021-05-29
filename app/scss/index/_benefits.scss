@@ -1,0 +1,60 @@
+
+.benefits {
+
+  &__inner {
+    background-color: rgba($orange-bg, 0.2);
+  }
+
+  &__list {
+    @include flexible ();
+  }
+
+  &__list:first-child {
+    border-right: 1px solid #0000;
+  }
+
+  &__item {
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 30px 0 46px 80px;
+  }
+
+  &__title {
+    color: $red9;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.2;
+    position: relative;
+    &::before {
+      content:"";
+      position: absolute;
+      left: -84px;
+      top: 3px;
+      width: 54px;
+      height: 53px;
+      object-fit: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--support::before {
+      background-image:url('../images/benefits/support.svg');
+    }
+
+    &--delivery::before {
+      background-image:url('../images/benefits/delivery.svg');
+    }
+
+    &--payment::before {
+      background-image:url('../images/benefits/payment.svg');
+    }
+  }
+ 
+  &__text {
+    font-family: 'DMSans', sans-serif;
+    font-weight: 400;
+    line-height: 1.9;
+    color: $grey7;
+    width: 215px;
+  }
+}

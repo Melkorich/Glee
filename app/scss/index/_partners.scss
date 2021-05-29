@@ -1,0 +1,33 @@
+.partners {
+  text-align: center;
+  position: relative;
+ 
+  &:before {
+    content:'';
+    position: absolute;
+    background-color: #fcd7b6;
+    opacity: 0.2;
+    height: 437px;
+    top: -270px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__list {
+    display:flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 100px;
+  }
+
+  &__img {
+    display: inline-block;
+  }
+  
+  &__link {
+    cursor: pointer;
+  }
+}
