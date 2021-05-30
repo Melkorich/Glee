@@ -2,12 +2,10 @@
 .main-slider {
   
   &__inner {
-    background-image: url('../images/main-slider/main-slider-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: cover;
-    position: relative;
-    min-height: 820px;
+    background-color: $orange-bg;
+  }
+
+  &__item {
     display: flex;
     align-items: center;
   }
@@ -15,12 +13,13 @@
   &__wrapper {
     @include flexible ();
     position: relative;
+    height: 820px;
   }
 
   &__wrapper::after {
     content:'';
     position: absolute;
-    width: 640px;
+    width: 634px;
     height: 634px;
     background-image: url('../images/main-slider/main-slider-product-bg.png');
     background-repeat: no-repeat;
@@ -30,6 +29,7 @@
     z-index: -1;
   }
 
+  
   &__content {
     max-width: 470px;
     min-height: 400px;
@@ -64,6 +64,12 @@
     display: flex;
     align-items: center;
     position: relative;
+  }
+
+  &__img {
+    max-width: 634px;
+    max-height: 634px;
+    object-fit: contain;
   }
 
   .slick-dots {

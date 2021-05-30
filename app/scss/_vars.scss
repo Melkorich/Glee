@@ -38,27 +38,6 @@ $red6: #523e3e;
   }
 }
 
-%btn-2 {
-  transition: background-color 1s, color 0.5s, background-image 1s, border-radius 0.8s, opacity 0.1s;
-  &:focus {
-    background-color: $blue2;
-    color:  $orange-bg;
-    path {
-      fill: $white1;
-    }
-  }
-  &:hover {
-    background-color: $blue1;
-    color: $orange-bg;
-    path {
-      fill: $orange-bg;
-    }
-  }
-  &:active {
-    opacity: 0.6;
-  }
-}
-
 %circle-btn {
   transition: background-color 1s;
   path {

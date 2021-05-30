@@ -9,7 +9,7 @@ $(function(){
   $('.partners-slider').slick({
     arrows: false,
     donts:false,
-    autoplay: true,
+    // autoplay: true,
     centerMode: false,
     slidesToShow: 4,
   });

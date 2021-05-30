@@ -3,11 +3,14 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+@import 'mixin';
 
 
 /*general*/
 @import "components/header";
 @import "components/footer";
+@import "components/video";
+@import "components/insights";
 
 /*home page*/
 
@@ -15,8 +18,7 @@
 @import "index/benefits";
 @import "index/products";
 @import "index/design";
-@import "index/video";
-@import "index/insights";
+@import "index/partners";
 
 
 /*about page*/
