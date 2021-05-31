@@ -37,7 +37,7 @@
     border: transparent;
     outline: transparent;
     @extend %circle-btn;
-    .search-icon {
+    & svg {
       width: 16px;
       height: 16px;
     }

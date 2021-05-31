@@ -36,17 +36,9 @@
     margin-right: 0;
   }
 
-  &:hover:nth-child(odd) {
+  &:hover{
     background-color: rgba(252,215,182,0.2);
     border: 1px solid $orange-bg;
-  }
-
-  &:hover:nth-child(even) {
-    background-color: rgb(238, 243, 192);
-    border: 1px solid rgb(171, 226, 171);
-  }
-  &:hover:nth-child(3n) {
-    background-color: rgb(187, 238, 231);
   }
 
   &__img-box {

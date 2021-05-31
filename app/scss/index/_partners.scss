@@ -1,8 +1,5 @@
 .partners {
-  display: flex;
-  align-items: baseline;
   position: relative;
-  justify-content: space-evenly;
  
   &:before {
     content:'';
@@ -19,15 +16,15 @@
   &__list {
     display:flex;
     align-items: center;
-  }
-
-  &__item {
-    margin: 0;
+    justify-content: space-around;
   }
 
   &__img {
-    display: inline-block;
+    display: inline;
     max-width: 150px;
+    max-height: 120px;
     object-fit: contain;
+    margin: 0;
   }
+
 }
