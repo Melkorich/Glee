@@ -56,5 +56,6 @@
     line-height: 1.9;
     color: $grey7;
     width: 215px;
+    @include line-climp ();
   }
 }

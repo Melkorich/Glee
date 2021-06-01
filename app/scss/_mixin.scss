@@ -4,7 +4,11 @@
   align-items: center;
 }
 
-@mixin overflow {
-  text-overflow: hidden;
-  line-clamp: 2;
+@mixin line-climp () {
+  -webkit-line-clamp: 2; 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical;
+  overflow: hidden; 
 }
+
+

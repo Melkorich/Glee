@@ -21,49 +21,59 @@ $red6: #523e3e;
 
 
 %btn {
-  transition: background-color 1s, color 0.5s, background-image 1s, border-radius 0.8s, opacity 0.1s;
+  transition: background-color 1s, color 0.5s, opacity 0.1s;
+
   &:focus {
     background-color: $blue2;
     color: $orange-bg;
-  }
-  &:hover {
-    background-color: $blue1;
-    color: $orange-bg;;
-    & path {
-      fill: $orange-bg;
+    svg {
+      fill: $white1;
+      transition: fill 1s;
     }
   }
+
+  &:hover {
+    background-color: $blue1;
+    color: $orange-bg;
+    svg {
+      fill: $orange-bg;
+      transition: fill 1s;
+    }
+  }
+
   &:active {
     opacity: 0.6;
   } 
 }
 
+
+
 %circle-btn {
-  transition: background-color 1s;
-  path {
-    transition: fill 0.6s;
+  transition: background-color 1s, opacity 0.3s;
+
+  svg {
+    transition: fill 0.5s;
   }
 
   &:focus {
     background-color: $grey1;
-    path {
-      fill: $white1;
+    svg {
+      fill: $orange-bg;
     }
   }
 
   &:hover {
     background-color: $grey1;
-    path {
+    svg {
       fill: $white1;
     }
   }
 
   &:active {
-    path {
+    svg{
       fill: $orange-bg;
     }
   }
-
 }
 
 @function max($numbers...) {

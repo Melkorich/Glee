@@ -46,7 +46,7 @@
     color: $blue1;
     text-transform: uppercase;
     margin-bottom: 30px;
-    @include overflow;
+    @include line-climp ();
   }
 
   &__text p {
@@ -55,6 +55,7 @@
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 370px;
+    @include line-climp ();
   }
 
   &__image {

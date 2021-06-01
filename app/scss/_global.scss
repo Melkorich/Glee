@@ -53,24 +53,6 @@ body {
   color: $balck1;
 }
 
-.btn-main {
-  max-width: 200px;
-  padding: 21px 17px 21px 27px;
-  background-color: $grey1;
-  font-family: 'Rubik' sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 1.25;
-  position: relative;
-  border: transparent;
-  outline: transparent;
-  color: $white1;
-  display: inline-block;
-  @extend %btn;
-  &__img {
-    padding-left: 60px;
-  }
-}
 
 
 .btn-main {
@@ -87,48 +69,27 @@ body {
   color: $white1;
   display: inline-block;
   overflow: hidden;
-  &__img {
+  @extend %btn;
+
+  &__icon {
     padding-left: 60px;
-  }
-  &:before {
-    content: "";
-    background-color: rgba(158, 156, 156, 0.5);
-    height: 100%;
-    width: 30px;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -50px;
-    transform: skewX(-45deg) translateX(-15px);
-    transition: none;
-  }
-    &:hover {
-    background-color: $blue1;
-    color: #fff;
-    &:before {
-      transform: skewX(-45deg) translateX(300px);
-      transition: transform 0.5s ease-in-out;
+    svg {
+      width: 22px;
+      height: 9px;
     }
   }
 }
 
-@keyframes btn-main {
-  0% {
-    transform: skewY(-45deg) translateX(0);
-  }
-  100% {
-    transform: skewY(-45deg) translateX(12.5em);
-  }
-}
-
-
-.product-filter {
+.product-filter,
+.design-filter {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+  
   &__item:not(:last-child) {
     margin-right: 20px;
   }
+
   &__btn {
     color: $grey2;
     font-family: 'DMSans', sans-serif;
@@ -138,51 +99,4 @@ body {
   }
 }
 
-
-/*animation*/
-
-.animation {
-  transition: background-color 1s, color 0.3s, opacity 0.1s;
-  background-color: transparent;
-  outline: transparent;
-  opacity: 1;
-
-  &:focus {
-    background-color: $grey1;
-    color: $red6;
-  }
-  
-  &:hover {
-    background-color: $grey1;
-  }
-  
-  &:active {
-    background-color: $grey1;
-    opacity: 0.7;
-  }
-}
-
-
-.amination-nav {
-  transition: background-color 1s;
-  path {
-    transition: fill 0.6s;
-  }
-  &:focus {
-    background-color: $grey1;
-    path {
-      fill: $white1;
-    }
-  }
-
-  &:hover {
-    background-color: rgb(226, 141, 66);
-  }
-
-  &:active {
-    path {
-      fill: $white1;
-    }
-  }
-}
 
