@@ -28,14 +28,8 @@
   @include flexible ();
 
   &__search {
-    max-width: 51px;
-    max-height: 52px;
-    background-color: $white2;
     padding: 18px;
-    border-radius: 50%;
     margin-right: 20px;
-    border: transparent;
-    outline: transparent;
     @extend %circle-btn;
     svg {
       width: 16px;
@@ -84,18 +78,8 @@
   }
 
   &__navigation {
-    max-width: 51px;
-    max-height: 52px;
     padding: 15px;
-    background-color: $grey1;
-    border-radius: 50%;
-    border: transparent;
-    outline: transparent;
     @extend %circle-btn;
-
-    & svg {
-      width: 20px;
-      height: 21px;
-    }
   }
 }
+

@@ -80,6 +80,20 @@ body {
   }
 }
 
+.btn-circle {
+  max-width: 51px;
+  max-height: 52px;
+  background-color: $white2;
+  border-radius: 50%;
+  border: transparent;
+  outline: transparent;
+  @extend %circle-btn;
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .product-filter,
 .design-filter {
   display: flex;
