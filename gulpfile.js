@@ -91,7 +91,7 @@ function cleanDist(){
 }
 
 function htmlInclude() {
-  return src(['app/index.html/**/*.html'])
+  return src(['app/html/*.html'])
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
@@ -103,7 +103,7 @@ function htmlInclude() {
 
 function watching(){
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/index.html/**/*.html'], htmlInclude);
+  watch(['app/html/**/*.html'], htmlInclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/images/icons/**.svg'], svgSprites);
   watch(['app/**/*.html']).on('change', browserSync.reload);
