@@ -6,13 +6,13 @@ $(function(){
     dots: true,
   });
 
-  // $('.partners-slider').slick({
-  //   arrows: false,
-  //   donts:false,
-  //   // autoplay: true,
-  //   centerMode: false,
-  //   slidesToShow: 4,
-  // });
+  $('.partners-slider').slick({
+    arrows: false,
+    donts:false,
+    autoplay: true,
+    centerMode: false,
+    slidesToShow: 4,
+  });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');

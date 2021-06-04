@@ -2,16 +2,19 @@
 
   &__list {
     display:flex;
-    align-items: center;
   }
   &__item {
     margin: 0 50px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    width: 150px;
   }
 
   &__img {
     display: inline-block;
-    max-width: 150px;
-    max-height: 120px;
+    width: 150px;
+    height: 120px;
     object-fit: contain;
   } 
 

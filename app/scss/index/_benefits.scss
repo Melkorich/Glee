@@ -9,28 +9,37 @@
     @include flexible ();
   }
 
-  &__list:first-child {
-    border-right: 1px solid #0000;
-  }
-
   &__item {
-    max-width: 570px;
-    margin: 0 auto;
-    padding: 30px 0 46px 80px;
+    width: 570px;
+    height: 171px;
+    position: relative;
+    &::before {
+      content:'';
+      position: absolute;
+      width: 1px;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+    &:not(:last-child)::before {
+      border: 1px solid $blue1;
+      opacity: 10%;
+    }
   }
 
-  &__title {
-    color: $red9;
-    font-family: 'DMSans', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2.2;
+  
+
+  &__item-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 46px 210px;
     position: relative;
+
     &::before {
       content:"";
       position: absolute;
-      left: -84px;
-      top: 3px;
+      left: 125px;
+      top: 40px;
       width: 54px;
       height: 53px;
       object-fit: contain;
@@ -49,13 +58,49 @@
       background-image:url('../images/icons/payment.svg');
     }
   }
+
+  // &__item--line {
+  //   position: relative;
+    
+  //   &::before,
+  //   &::after {
+  //     content:'';
+  //     position: absolute;
+  //     width: 1px;
+  //     height: 170px;
+  //     opacity: 10%;
+  //   }
+
+  //   &::before {
+  //     border-right: 1px solid $blue1;
+  //     left: 0;
+  //     top: 0;
+  //   }
+
+  //   &::after {
+  //     border-left: 1px solid $blue1;
+  //     right: 0;
+  //     top: 0;
+  //   }
+  // }
+
+  &__title {
+    color: $red9;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.2;
+    display: block;
+    @include line-climp ();
+    -webkit-line-clamp: 1; 
+  }
  
-  &__text {
+  &__text p {
     font-family: 'DMSans', sans-serif;
     font-weight: 400;
     line-height: 1.9;
+    max-width: 215px;
     color: $grey7;
-    width: 215px;
     @include line-climp ();
   }
 }
