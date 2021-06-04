@@ -91,7 +91,7 @@ function cleanDist(){
 }
 
 function htmlInclude() {
-  return src('app/html/*.html')
+  return src('app/**/*.html')
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
