@@ -1,11 +1,11 @@
 
 .benefits {
-
-  &__inner {
+  &__list {
+    @include flexible ();
     background-color: rgba($orange-bg, 0.2);
   }
 
-  &__list {
+  &__text {
     @include flexible ();
   }
 

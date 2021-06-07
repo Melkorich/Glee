@@ -49,6 +49,16 @@
     @include line-climp ();
   }
 
+  &__text  { 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow-y: auto;
+    word-wrap: break-word;
+  }
+
   &__text p {
     color: $blue2;
     font-size: 18px;
@@ -56,11 +66,12 @@
     margin-bottom: 30px;
     max-width: 370px;
     @include line-climp ();
+    -webkit-line-clamp: 3;
   }
 
   &__image {
     max-width: 640px;
-    height: 634px;
+    height: 580px;
     overflow: hidden;
     display: flex;
     align-items: center;
