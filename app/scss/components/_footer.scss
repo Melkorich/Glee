@@ -1,11 +1,11 @@
 .footer {
-  color: $grey8;
+  color: $grey7b;
   font-size: 14px;
   line-height: 1.7;
 
   &__top {
     padding: 40px 0 70px;
-    border-bottom: 1px solid $grey1;
+    border-bottom: 1px solid $greyc8;
     display: flex;
     min-height: 325px;
   }
@@ -49,7 +49,7 @@
   &__title {
     font-family: 'DMSans', sans-serif;
     font-weight: 700;
-    color: $purple5;
+    color: $blue44;
     text-transform: uppercase;
     margin-bottom: 20px;
     font-size: 16px;
@@ -94,12 +94,12 @@
 
   &__subscribe {
     max-width: 100px;
-    background-color: $grey1;
+    background-color: $greyc8;
     border: transparent;
     outline: transparent;
     font-size: 14px;
     padding: 7px 19px 7px 16px;
-    color: $white1;
+    color: $whiteff;
     font-family: 'DMSans', sans-serif;
     font-weight: 400;
     @extend %btn;
@@ -121,6 +121,6 @@
   
   &__bottom-item:not(:last-child) {
     padding-right: 15px;
-    border-right: 1px solid $grey8;
+    border-right: 1px solid $grey7b;
   }
 }

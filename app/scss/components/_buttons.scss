@@ -1,0 +1,69 @@
+.btn-main {
+  padding: 21px 16px 21px 26px;
+  background-color: $greyc8;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.25;
+  position: relative;
+  border: transparent;
+  outline: transparent;
+  color: $whiteff;
+  display: inline-block;
+  overflow: hidden;
+  @extend %btn;
+  // &:before {
+  //   content: '';
+  //   background-color: rgba(187, 184, 184, 0.5);
+  //   height: 100%;
+  //   width: 30px;
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: -50px;
+  //   transform: skewX(-45deg) translateX(-20px);
+  //   transition: none;
+  // }
+  // &:hover {
+  // background-color: $blue1;
+  // color: $orange-bg;
+  //   &:before {
+  //     transform: skewX(-45deg) translateX(300px);
+  //     transition: transform 0.5s ease-in-out;
+  //   }
+  // }
+
+  // @keyframes btn-main {
+  //   0% {
+  //     transform: skewY(-45deg) translateX(0);
+  //   }
+  //   100% {
+  //     transform: skewY(-45deg) translateX(12.5em);
+  //   }
+  // }
+
+  &__icon {
+    padding-left: 60px;
+    svg {
+      width: 22px;
+      height: 9px;
+    }
+  }
+}
+
+.btn-circle {
+  width: 51px;
+  height: 52px;
+  background-color: $whitf4;
+  border-radius: 50%;
+  border: transparent;
+  outline: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %circle-btn;
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}

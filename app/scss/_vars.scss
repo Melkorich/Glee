@@ -1,39 +1,39 @@
-$grey1: #a3bbc8;
-$grey2: #8b8b8b;
-$grey8: #7b7b7b;
-$grey7: #585858;
+$whiteff: #ffffff;
+$whitf4: #edf1f4;
 
-$white1: #ffffff;
-$white2: #edf1f4;
+$greyc8: #a3bbc8;
+$grey8b: #8b8b8b;
+$grey7b: #7b7b7b;
+$grey58: #585858;
 
 $orange-bg: #fcd7b6;
 
-$blue1: #243f4d;
-$blue2: #436372;
+$blue4d: #243f4d;
+$blue72: #436372;
+$blue44: #1f2044;
 
-$balck1: #191919;
-$black2: #1a1a1a;
+$balck19: #191919;
+$black1a: #1a1a1a;
 
-$purple5: #1f2044;
 
-$red9: #414141;
-$red6: #523e3e;
+$red41: #414141;
+$red3e: #523e3e;
 
 
 %btn {
   transition: background-color 1s, color 0.5s, opacity 0.1s;
 
   &:focus {
-    background-color: $blue2;
+    background-color: $blue72;
     color: $orange-bg;
     svg {
-      fill: $white1;
+      fill: $whiteff;
       transition: fill 1s;
     }
   }
 
   &:hover {
-    background-color: $blue1;
+    background-color: $blue4d;
     color: $orange-bg;
     svg {
       fill: $orange-bg;
@@ -56,16 +56,16 @@ $red6: #523e3e;
   }
 
   &:focus {
-    background-color: $grey1;
+    background-color: $greyc8;
     svg {
       fill: $orange-bg;
     }
   }
 
   &:hover {
-    background-color: $grey1;
+    background-color: $greyc8;
     svg {
-      fill: $white1;
+      fill: $whiteff;
     }
   }
 
