@@ -1,0 +1,36 @@
+/*по другому такие ховеры не работают, прошу не менять*/
+.design__item {
+  .design-card {
+    &:hover {
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.5);
+      background-color: $orange-bg;
+      .design-card__title {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &:hover:nth-child(3n-1){
+    .design-card {
+      background-color: rgb(188, 233, 188);
+    }
+  }
+
+  &:hover:nth-child(4n-1){
+    .design-card {
+      background-color: rgb(172, 230, 222);
+    }
+  }
+
+  &:hover:nth-child(5n-1) {
+    .design-card {
+      background-color: rgb(224, 233, 141);
+    }
+  }
+
+  &:hover:nth-child(6n-1) {
+    .design-card {
+      background-color: rgb(238, 206, 236);
+    } 
+  }
+}
