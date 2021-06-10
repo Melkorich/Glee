@@ -82,6 +82,11 @@
     .video__play {
       fill: $whiteff;
     }
+    .video__img-box {
+      &::before,
+      &::after {
+        opacity: 0.6;
+      }
+    }
   }
- 
 }
