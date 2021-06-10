@@ -1,9 +1,9 @@
 .products {
-  padding-top: 74px;
+  padding-top: 60px;
   text-align: center;
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .mixitup-control-active {
@@ -13,28 +13,28 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
+    &--container {
+      max-width: 1230px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
   }
 }
 
 .product-item {
   max-width: 270px;
   width: 100%;
-  min-height: 380px;
-  margin-bottom: 39px;
-  margin-right: 29px;
+  height: 380px;
+  margin-bottom: 40px;
+  margin-right: 30px;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   border-radius: 10px;
-  text-align: center;
   padding: 35px 19px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid transparent;
   transition: background-color 0.5s, border 0.5s,  box-shadow 0.6s;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
 
   &.mixitup-control-active:nth-child(4n) {
     margin-right: 29px;
@@ -154,6 +154,7 @@
 
   &:nth-child(2)::before {
     background-image:linear-gradient(to right, $orange-bg 25%, $whiteff 100%);
+    /*я специально сдесь задал особый градиент для красоты*/
   }
 
   &:first-child {
@@ -214,7 +215,7 @@
   &__btn {
     background-color: transparent;
     border: 1px solid #436372;
-    padding: 21px 10px;
+    padding: 21px 19px;
     line-height: 1;
     font-size: 15px;
     border-radius: 5px;
