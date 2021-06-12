@@ -28,9 +28,11 @@
   }
 
   &__address-link,
-  &__address-tel {
+  &__address-tel,
+  &__address-mail {
     display: inline-block;
     margin-bottom: 15px;
+    @include line-climp ();
   }
 
   &__address-name,
@@ -44,6 +46,7 @@
     margin-right: 30px;
     align-items:flex-end;
     padding-top: 15px;
+    @include line-climp ();
   }
 
   &__title {
@@ -53,6 +56,8 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     font-size: 16px;
+    min-width: 270px;
+    @include line-climp ();
   }
 
   &__item:not(:last-child) {
@@ -63,16 +68,20 @@
     max-width: 270px;
     width: 100%;
     padding-top: 15px;
+    @include line-climp ();
   }
 
   &__newsletter-title {
     margin-bottom: 20px;
     display: inline-block;
+    @include line-climp ();
   }
 
   &__newsletter-text {
     line-height: 1.7;
     margin-bottom: 38px;
+    @include line-climp ();
+    -webkit-line-clamp: 4; 
   }
 
   .form__field {

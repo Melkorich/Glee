@@ -66,9 +66,8 @@
     display: block;
     object-fit: cover;
   }
-
+  
   &__news {
-    display: inline-block;
     text-align: center;
     padding: 5px 31px;
     position: absolute;
@@ -77,11 +76,10 @@
     color: #fff;
     transform: translateY(-50%);
     left: 28px;
-    right: auto;
     border-radius: 25px;
     background-color: $greyc8;
     @include line-climp ();
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 2; 
     transition: background-color 0.8s, color 0.6s;
     &:focus {
       background-color: $blue72;
@@ -114,12 +112,38 @@
     text-transform: uppercase;
     font-size: 12px;
     line-height: 2.5;
-    display: flex;
     padding-top: 10px;
   }
 
   &__date {
     margin-right: 30px;
+    &::before {
+      background-image:url('../images/icons/calendar.svg');
+      left: 0;
+      width: 11px;
+      height: 13px;
+    }
+  }
+
+  &__date,
+  &__author {
+    position: relative;
+    display:inline-block;
+    padding-left: 20px;
+    &::before {
+      content:'';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 6px;
+      left: 0;
+    } 
+  }
+
+  &__author::before {
+    background-image:url('../images/icons/user.svg');
+    width: 14px;
+    height: 14px;
   }
 
   &__title{

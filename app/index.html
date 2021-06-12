@@ -41,13 +41,14 @@
       
         <div class="header__user-nav user-nav">
           <button class="user-nav__search btn-circle" type="button">
-            <span class="sr-only">Type to search</span>
+            <span class="sr-only">Open to search</span>
             <svg class="search-icon">
               <use xlink:href="images/sprite.svg#search-icon"></use>
             </svg>
           </button>
 
           <a class="user-nav__heart amination-nav" href="#">
+            <span class="sr-only">Favourites</span>
             <span class="user-nav__wrap">
               <svg>
                 <use xlink:href=images/sprite.svg#heart></use>
@@ -57,6 +58,7 @@
           </a>
 
           <a class="user-nav__basket amination-nav" href="#">
+            <span class="sr-only">your basket</span>
             <span class="user-nav__wrap">
             <svg>
               <use xlink:href=images/sprite.svg#basket></use>
@@ -66,11 +68,10 @@
           </a>
     
           <button class="user-nav__navigation btn-circle">
-            <span class="user-nav__wrap">
-              <svg class="use-nav__btn-menu">
-                <use xlink:href=images/sprite.svg#use-nav-menu></use>
-              </svg>
-            </span>
+            <span class="sr-only">navigation menu</span>
+            <svg class="use-nav__btn-menu">
+              <use xlink:href=images/sprite.svg#use-nav-menu></use>
+            </svg>
           </button>
           
         </div>
@@ -803,6 +804,8 @@
 
     <a class="video" style="background-image:url(images/video/video-bg.jpg);" 
     data-fancybox href="https://youtu.be/NoCn3HDuBvw">
+    <span class="sr-only">click to watch video about furniture</span>
+     <!-- обертка для свг специально для анимации -->
       <div class="video__img-box">
         <svg class="video__play">
           <use xlink:href=images/sprite.svg#play-icon></use>
@@ -825,7 +828,7 @@
         <ul class="insights__top-items">
           
           <li class="insights__top-item insights-item">
-            <a class="insights-item__link" href="#">
+            <a class="insights-item__link" href="#!">
               <img class="insights-item__img" src="images/insights/1.jpg" alt="living room">
               <span class="insights-item__news">news</span>
             </a>
@@ -833,17 +836,17 @@
             <article class="insights-item__wrapper">
               <div class="insights-item__text">
                 <h3 class="insights-item__title">
-                  <a class="insights-item__title-link" href="#">
+                  <a class="insights-item__title-link animation" href="#!">
                     Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                   </a>
                 </h3>
               </div>
               <div class="insights-item__data">
-                <a class="insights-item__date animation" href="#">
+                <a class="insights-item__date animation" href="#!">
                   <time data-time="2020-01-28">28 January, 2020</time>
                 </a>
-                <a class="insights-item__author animation" href="#">
-                    by admin
+                <a class="insights-item__author animation" href="#!">
+                  by admin
                 </a>
               </div>
             </article>
@@ -858,7 +861,7 @@
             <article class="insights-item__wrapper">
               <div class="insights-item__text">
                 <h3 class="insights-item__title">
-                  <a class="insights-item__title-link" href="#">
+                  <a class="insights-item__title-link animation" href="#">
                     Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                   </a>
                 </h3>
@@ -868,7 +871,7 @@
                   <time data-time="2020-01-28">28 January, 2020</time>
                 </a>
                 <a class="insights-item__author animation" href="#">
-                    by admin
+                  by admin
                 </a>
               </div>
             </article>
@@ -883,7 +886,7 @@
             <article class="insights-item__wrapper">
               <div class="insights-item__text">
                 <h3 class="insights-item__title">
-                  <a class="insights-item__title-link" href="#">
+                  <a class="insights-item__title-link animation" href="#">
                     Rncididunt ut labore et dolore magna aliqua. Ut enim 
                   </a>
                 </h3>
@@ -893,7 +896,7 @@
                   <time data-time="2020-01-28">28 January, 2020</time>
                 </a>
                 <a class="insights-item__author animation" href="#">
-                    by admin
+                  by admin
                 </a>
               </div>
             </article>

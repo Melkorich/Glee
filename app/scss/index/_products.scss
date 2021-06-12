@@ -84,7 +84,7 @@
     display: flex;
     align-items: center;
   }
-
+ 
   &__item:not(:last-child) {
     margin-right: 16px;
   }
@@ -201,7 +201,7 @@
     max-width: 260px;
     @include line-climp ();
   }
-
+ 
   &__text {
     color: $blue4d;
     font-family: "Rubik", sans-serif;
@@ -216,10 +216,7 @@
     background-color: transparent;
     border: 1px solid #436372;
     padding: 21px 19px;
-    line-height: 1;
-    font-size: 15px;
     border-radius: 5px;
-    max-width: 180px;
     color: $blue72;
     .feature-item__icon {
       padding-left: 40px;

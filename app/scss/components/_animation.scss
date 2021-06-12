@@ -1,20 +1,19 @@
 .animation {
-  transition: background-color 1s, color 0.3s, opacity 0.1s;
+  transition: background-color 1s, color 0.3s, opacity 0.1s, border-bottom 1s;
   background-color: transparent;
   outline: transparent;
 
   &:focus {
-    background-color: $greyc8;
-    color: $red3e;
+    color: #54c2f5;
   }
   
   &:hover {
-    background-color: $greyc8;
-  }
+    color: #fc8015;
+  } 
   
   &:active {
-    background-color: $greyc8;
-    opacity: 0.7;
+    color: $balck19;
+    opacity: 0.5;
   }
 }
 

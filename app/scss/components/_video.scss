@@ -69,15 +69,17 @@
         background-color: $orange-bg;
         width: 75px;
         height: 75px;
+        animation: radial-pulse 1s infinite;
       }
       &::after {
         width: 200px;
         height: 200px;
         background-color: $orange-bg;
+        animation: radial-pulse 1s infinite;
       }
     }
   }
-
+ 
   &:active {
     .video__play {
       fill: $whiteff;
@@ -88,5 +90,15 @@
         opacity: 0.6;
       }
     }
+  }
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
   }
 }
