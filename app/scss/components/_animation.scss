@@ -1,5 +1,5 @@
 .animation {
-  transition: background-color 1s, color 0.3s, opacity 0.1s, border-bottom 1s;
+  transition: color 0.3s, opacity 0.1s;
   background-color: transparent;
   outline: transparent;
 
@@ -42,7 +42,8 @@
   }
 }
 
-.btn-main {
+.main-link {
+  
   &:before {
     content: '';
     background-color: rgba(187, 184, 184, 0.5);
@@ -65,7 +66,7 @@
   }
 }
 
-@keyframes btn-main {
+@keyframes main-link {
   0% {
     transform: skewY(-45deg) translateX(0);
   }

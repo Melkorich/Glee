@@ -1,8 +1,14 @@
-.partners {
 
+.partners {
+  background-color: rgba(#fcd7b6, 0.2);
+  margin-top: -248px;
+  padding-top: 245px;
+  margin-bottom: 35px;
   &__list {
     display:flex;
+    padding-bottom: 65px;
   }
+ 
   &__item {
     margin: 0 50px;
     height: 120px;
@@ -10,12 +16,14 @@
     align-items: center;
     width: 150px;
   }
-
+  
   &__img {
+    z-index: 6;
     display: inline-block;
     width: 150px;
     height: 120px;
     object-fit: contain;
   } 
-
 }
+ 
+

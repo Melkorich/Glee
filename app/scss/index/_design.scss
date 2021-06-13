@@ -11,8 +11,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 34px 30px;
   }
-}
 
+  .mixitup-control-active {
+    color: $red3e;
+  }
+}
+ 
 .design-card {
   background-color: #f8f8f8;
   text-align: left;
@@ -37,13 +41,12 @@
     font-size: 20px;
     color: $black1a;
     transition: transform 0.6s;
-    @include line-climp ();
+    @include line-climp(2);
   }
   
   &__type {
     color: $greyc8;
-    @include line-climp ();
-    -webkit-line-clamp: 3; 
+    @include line-climp(3);
     max-width: 70px;
   }
 

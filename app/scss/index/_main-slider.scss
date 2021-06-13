@@ -31,6 +31,7 @@
     min-height: 400px;
     width: 100%;
     overflow: hidden;
+    @include line-climp(2);
   }
 
   &__title {
@@ -40,19 +41,18 @@
     line-height: 1;
     color: $blue4d;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    @include line-climp ();
-    -webkit-line-clamp: 3; 
+    margin-bottom: 28px;
+    @include line-climp(3);
   }
 
   &__text {
     color: $blue72;
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
     max-width: 370px;
-    @include line-climp ();
-    -webkit-line-clamp: 4;
+    @include line-climp(4);
+    letter-spacing: 0.2px;
   }
 
   &__imgbox {
@@ -82,6 +82,7 @@
 
     li {
       padding: 0 5px;
+
       button {
         background-color: $whiteff;
         opacity: 0.3;
@@ -94,6 +95,7 @@
         transition: background-color 0.6s, border 0.6s;
       }
     }
+
     .slick-active button{
       opacity: 1;
       background-color: $whiteff;
@@ -103,10 +105,12 @@
     button:focus {
       background-color: $whiteff;
     }
+
     button:hover {
       background-color: $blue4d;
       color: $whiteff;
     }
+    
     button:active {
       background-color: rgb(234, 161, 96);
       color: $black1a;

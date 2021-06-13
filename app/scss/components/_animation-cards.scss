@@ -1,6 +1,6 @@
-/*по другому такие ховеры не работают, прошу не менять*/
-/*потом еще подумаю как улучшить*/
-/*active и focus тоже не работают их пока убрал*/
+/*тут пока оставляю только ховерный эффект,
+ пока не пойму почему не работаем фокус , не буду зацикливаться на этом, оставлю пока так.
+ вообще хочу только ховер оставить*/
 
 .design__item {
   transition: background-color 1s, box-shadow 1s;
@@ -14,30 +14,30 @@
     .design-card__title {
       transform: scale(1.1);
     }
-  }
- 
-  &:hover:nth-child(3n-1){
-    .design-card {
-      background-color: rgb(188, 233, 188);
-    }
-  }
 
-  &:hover:nth-child(4n-1){
-    .design-card {
-      background-color: rgb(172, 230, 222);
+    &:nth-child(3n-1){
+      .design-card {
+        background-color: rgb(188, 233, 188);
+      }
     }
-  }
-
-  &:hover:nth-child(5n-1) {
-    .design-card {
-      background-color: rgb(224, 233, 141);
+  
+    &:nth-child(4n-1){
+      .design-card {
+        background-color: rgb(172, 230, 222);
+      }
     }
-  }
-
-  &:hover:nth-child(6n-1) {
-    .design-card {
-      background-color: rgb(238, 206, 236);
-    } 
+  
+    &:nth-child(5n-1) {
+      .design-card {
+        background-color: rgb(224, 233, 141);
+      }
+    }
+  
+    &:nth-child(6n-1) {
+      .design-card {
+        background-color: rgb(238, 206, 236);
+      } 
+    }
   }
 
 }

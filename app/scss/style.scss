@@ -1,5 +1,5 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'mixin';
 @import 'reset';
 @import 'libs';
@@ -14,6 +14,7 @@
 @import "components/animation";
 @import "components/buttons";
 @import "components/animation-cards";
+@import "components/filter";
 
 /*home page*/
 
@@ -22,6 +23,7 @@
 @import "index/products";
 @import "index/design";
 @import "index/partners";
+
 
 
 /*about page*/

@@ -21,6 +21,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  
   &--big {
     max-width: 1800px;
   }
@@ -53,28 +54,6 @@ body {
   color: $balck19;
 }
 
-
-
-.product-filter,
-.design-filter {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 80px;
-  
-  &__item:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  &__btn {
-    color: $grey8b;
-    font-family: 'DMSans', sans-serif;
-    font-weight: 700;
-    background-color: transparent;
-    border: transparent;
-  }
-}
-
-
 .search-icon {
   fill: $blue4d;
 }
@@ -83,7 +62,14 @@ body {
   fill: $greyc8;
 }
 
-.arrow-white {
+.arrow-right--white {
   fill: $whiteff;
 }
+
+.arrow-right--dark {
+  fill: $blue4d;
+}
+
+
+
 

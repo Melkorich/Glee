@@ -4,8 +4,8 @@
   align-items: center;
 }
 
-@mixin line-climp () {
-  -webkit-line-clamp: 2; 
+@mixin line-climp ($row) {
+  -webkit-line-clamp: $row; 
   display: -webkit-box; 
   -webkit-box-orient: vertical;
   overflow: hidden; 
