@@ -98,7 +98,7 @@
   } 
 
   &__btn {
-    max-width: 100px;
+    min-width: 100px;
     background-color: $greyc8;
     font-size: 14px;
     padding: 7px 19px 7px 16px;
@@ -112,17 +112,115 @@
     @include flexible ();
     line-height: 2;
     padding: 25px 0;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    line-height: 1.3;
   }
 
   &__list {
     display: flex;
   }
 
-  &__bottom-item:not(:last-child)  {
+  &__bottom-item {
     padding: 0 9px;
+    border-right: 1px solid $grey7b;
   }
-  
-  &__bottom-link:not(:last-child) {
-    padding-right: 9px;
+
+  &__bottom-item:last-child {
+    padding-right: 0;
+    border-right: none;
   }
+}
+
+
+/* медиа */
+
+.footer {
+
+  @include maxw($lg) {
+    font-size: 18px;
+  }
+
+  &__top {
+    @include maxw($lg) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__contacts {
+    @include maxw($lg) {
+      width: 200px;
+    }
+    @include maxw($md) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__items {
+    @include maxw($lg) {
+      width: 170px;
+    }
+    @include maxw($xs) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__newsletter {
+    @include maxw($lg) {
+      max-width: 100%;
+      padding-top: 30px;
+    }
+  }
+
+  &__form {
+    @include maxw($lg) {
+      width: 300px;
+    }
+    @include maxw($sm) {
+      flex-wrap: wrap;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    @include maxw($lg) {
+      height: 44px;
+      padding: 5px 10px;
+    }
+    @include maxw($sm) {
+      max-width: 100%;
+      display: block;
+      margin-bottom: 15px;
+      height: 45px;
+    }
+    &::placeholder {
+      @include maxw($lg) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__bottom {
+    @include maxw($sm) {
+     justify-content: center;
+     text-align: center;
+    }
+  }
+
+  &__btn {
+    @include maxw($lg) {
+      font-size: 18px;
+    }
+    @include maxw($sm) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+ 
 }

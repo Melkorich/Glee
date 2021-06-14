@@ -1,5 +1,23 @@
+$(document).ready(function(){
+  $('.menu__btn').click(function(event) {
+    $('.menu__btn').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});
+
+
+
 $(function(){
-  
+
+  $('.menu__btn').on('click', function(){
+    $('.menu').toggleClass('menu--active');
+  });
+
+  $('.menu__btn').on('click', function(){
+    $('.user-nav').toggleClass('user-nav--active');
+  });
+
+
 
   $('.main-slider__inner').slick({
     arrows: false,
@@ -27,5 +45,8 @@ $(function(){
   var mixer2 = mixitup(containerEl2, config);
 
 });
+
+
+
 
 

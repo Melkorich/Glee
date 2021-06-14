@@ -27,6 +27,11 @@ body {
   }
 }
 
+.logo {
+  position: relative;
+  z-index: 5;
+}
+
 .logo__img {
   max-width: 146px;
   max-height: 39px;

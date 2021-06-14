@@ -103,7 +103,7 @@ function htmlInclude() {
 
 function watching(){
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/html/**/*.html'], htmlInclude);
+  watch(['app/htm/**/*.html'], htmlInclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/images/icons/**.svg'], svgSprites);
   watch(['app/**/*.html']).on('change', browserSync.reload);
