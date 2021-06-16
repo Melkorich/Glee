@@ -6,7 +6,6 @@ $(document).ready(function(){
 });
 
 
-
 $(function(){
 
   $('.menu__btn').on('click', function(){
