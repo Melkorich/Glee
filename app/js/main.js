@@ -29,6 +29,29 @@ $(function(){
     autoplay: true,
     centerMode: false,
     slidesToShow: 4,
+    
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          arrows: false,
+          autoplay: true,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          autoplay: true,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 2,
+        }
+      }
+    ]
   });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');

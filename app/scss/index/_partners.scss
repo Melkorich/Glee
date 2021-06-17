@@ -25,5 +25,50 @@
     object-fit: contain;
   } 
 }
+
+/*media*/
  
+.partners {
+
+  @include maxw($xl) {
+    padding-top: 0;
+    margin-top: -65px;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  @include maxw($md) {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    @include maxw($xl) {
+      padding-bottom: 20px;
+    }
+    @include maxw($sm) {
+      padding-bottom: 0;
+    }
+   
+  }
+
+  &__img {
+    @include maxw($xl) {
+      width: 100px;
+      height: 145px;
+    }
+
+    @include maxw($sm) {
+      width: 90px;
+      height: 70px;
+    }
+  }
+  &__item {
+    @include maxw($sm) {
+      height: 70px;
+    }
+   
+  }
+  
+}
 

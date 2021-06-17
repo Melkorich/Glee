@@ -85,7 +85,7 @@
 
   &__title{
     @include line-climp(3);
-    font-family: "DM Sans";
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
   }
@@ -111,8 +111,8 @@
   }
 
   &__text {
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
-    font-family: 'DMSans' sans-serif;
     font-weight: 500;
     margin-bottom: auto;
   }
@@ -155,5 +155,49 @@
     background-image:url('../images/icons/user.svg');
     width: 14px;
     height: 14px;
+  }
+}
+
+
+/*media*/
+
+
+.insights {
+  &__items {
+    @include maxw($xl) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__item {
+    @include maxw($xl) {
+      
+      margin: 10px 10px;
+    }
+  }
+  .insights__item:not(:last-child) {
+    @include maxw($lg) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.insights-card {
+
+  @include maxw($xs) {
+    height: 400px;
+  }
+
+  &__content{
+    @include maxw($xs) {
+      padding: 20px 20px 0;
+    }
+  }
+
+  &__img {
+    @include maxw($xs) {
+      height: 220px;
+    }
+   
   }
 }

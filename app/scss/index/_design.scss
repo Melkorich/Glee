@@ -67,3 +67,85 @@
 
 
 
+/*media*/
+
+.design {
+  @include maxw($xl) {
+    display: flex;
+  }
+
+  @include maxw($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include maxw($sm) {
+    padding-bottom: 50px;
+  }
+
+  
+
+  &__list {
+    justify-content: center;
+    text-align: center;
+  }
+  &__items {
+    @include maxw($xl) {
+      grid-gap: 25px 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include maxw($xs) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      min-width: 100%;
+      justify-content: center;
+    }
+
+    @include maxw($lg) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
+  }
+ 
+}
+
+.design-card  {
+
+  @include maxw($xs) {
+    width: 271px;
+    height: 190px;
+  }
+
+  @include maxw($lg) {
+    margin-right: 0;
+  }
+
+  &__box {
+    @include maxw($lg) {
+      max-width: 220px;
+      right: 0;
+    }
+    @include maxw($xs) {
+      height: 120px;
+    }
+    
+  }
+  &__link {
+    @include maxw($lg) {
+      padding: 20px 0 0 20px;
+    }
+  }
+  &__img {
+    @include maxw($xs) {
+      width: 130px;
+      height: 120px;
+    }
+  }
+  &__title {
+    @include maxw($xs) {
+      font-size: 18px;
+    }
+  }
+
+}

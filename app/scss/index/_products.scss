@@ -13,6 +13,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     &--container {
       max-width: 1230px;
       margin: 0 auto;
@@ -117,13 +118,15 @@
 
 .products-features {
   padding: 150px 0 95px;
-
+  display: flex;
+  justify-content: center;
   &__list {
     display: flex;
   }
 
   &__item {
-
+    max-width: 870px;
+    width: 100%;
     &:first-child {
       margin-right: 30px;
     }
@@ -228,5 +231,71 @@
 }
   
 
-
+/*media*/
  
+.products {
+
+  &__title {
+    @include maxw($sm) {
+      font-size: 30px;
+      padding: 0 15px;
+    }
+  }
+
+  &__filters {
+    @include maxw($sm) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.product-card  {
+  @include maxw($md) {
+    padding: 10px;
+  }
+}
+
+.products-features {
+  &__list {
+    @include maxw($xxl) {
+      flex-direction: column;
+      
+    }
+  }
+  &__item {
+    @include maxw($xxl) {
+      display: block;
+      width: 870px;
+      display: flex;
+      justify-content: space-between;
+      &:first-child {
+        margin-bottom: 40px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.article-lamp {
+  @include maxw($xxl) {
+    width: 100%;
+    display: block;
+  }
+}
+.article-lamp__img {
+  @include maxw($xxl) {
+    height: 300px;
+    bottom: 68px;
+  }
+}
+
+
+.title {
+  @include maxw($md) {
+    font-size: 30px;
+  }
+
+  @include maxw($sm) {
+    font-size: 23px;
+  }
+}
