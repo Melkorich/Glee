@@ -15,6 +15,7 @@
     @include flexible ();
     position: relative;
     height: 820px;
+
     &::before {
       content:'';
       position: absolute;
@@ -132,7 +133,6 @@
     @include maxw($xxl) {
       width: 411px;
     }
-    
   }
 
   &__wrapper {
@@ -143,6 +143,7 @@
         right: 0;
       }
     }
+
     @include maxw($xl) {
       height: 730px;
       padding-right: 0;
@@ -153,18 +154,21 @@
         background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,0.7) 100%);
       }
     }
+
     @include maxw($lg) {
       height: 580px;
       &::before {
         display: none;
       }
     }
+
     @include maxw($md) {
       flex-direction: column;
       align-items: center;
       padding: 50px 10px;
       height: 460px;
     }
+
     @include maxw($xs) {
       padding-top: 35px;
     }
@@ -174,6 +178,7 @@
     @include maxw($xxl) {
       max-width: 610px;
     }
+
     @include maxw($lg) {
       background-image: none !important;
       max-width: 470px;
@@ -193,14 +198,17 @@
     @include maxw($xl) {
       font-size: 60px;
     }
+
     @include maxw($lg) {
       font-size: 50px;
     }
+
     @include maxw($md) {
       display: block;
       width: 100%;
       margin-bottom: 25px;
     }
+
     @include maxw($sm) {
       font-size: 45px;
       max-width: 100%;
@@ -211,6 +219,7 @@
     @include maxw($xl) {
       max-width: 360px;
     }
+
     @include maxw($md) {
       display: inline-block;
       width: 100%;
@@ -225,10 +234,12 @@
       width: 90%;
       height: 100%;
     }
+
     @include maxw($md) {
       display: none !important;
     }
   }
+  
   &__link {
     @include maxw($md) {
      margin: 0 auto;

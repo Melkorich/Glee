@@ -16,6 +16,7 @@
   overflow: hidden;
   @extend %btn;
   @include line-climp(1);
+
   svg {
     position: absolute;
     right: 20px;
@@ -37,6 +38,7 @@
   align-items: center;
   justify-content: center;
   @extend %circle-animation;
+  
   & svg {
     width: 20px;
     height: 20px;

@@ -82,12 +82,11 @@
     padding-bottom: 50px;
   }
 
-  
-
   &__list {
     justify-content: center;
     text-align: center;
   }
+
   &__items {
     @include maxw($xl) {
       grid-gap: 25px 20px;
@@ -126,6 +125,7 @@
       max-width: 220px;
       right: 0;
     }
+
     @include maxw($xs) {
       height: 120px;
     }
@@ -136,16 +136,17 @@
       padding: 20px 0 0 20px;
     }
   }
+
   &__img {
     @include maxw($xs) {
       width: 130px;
       height: 120px;
     }
   }
+
   &__title {
     @include maxw($xs) {
       font-size: 18px;
     }
   }
-
 }

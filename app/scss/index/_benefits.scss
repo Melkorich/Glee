@@ -1,5 +1,6 @@
 
 .benefits {
+
   &__list {
     @include flexible ();
     background-color: rgba($orange-bg, 0.2);
@@ -11,6 +12,7 @@
     position: relative;
     justify-content: start;
     padding: 45px 30px 30px 220px;
+
     &::before {
       content:'';
       position: absolute;
@@ -19,6 +21,7 @@
       bottom: 0;
       top: 0;
     }
+
     &:not(:last-child)::before {
       border: 1px solid rgba($blue4d, 0.1);
     }
@@ -80,10 +83,12 @@
         margin: 0 auto;
       }
     }
+
     &__item {
       @include maxw($xxl) {
         padding-left: 100px;
       }
+
       @include maxw($lg) {
         padding: 10px;
         width: 100%;
@@ -95,6 +100,7 @@
           border: 1px solid transparent;
         }
       }
+
       @include maxw($md) {
         display: block;
         width: 100%;
@@ -106,15 +112,15 @@
     }
 
     &__box  {
+
       @include maxw($lg) {
         &::before {
           background-image: none;
         }
       }
+
       @include maxw($md) {
         display: inline-block;
       }
     }
-    
-
   }

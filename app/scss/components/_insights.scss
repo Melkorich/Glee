@@ -169,12 +169,14 @@
       justify-content: center;
     }
   }
+
   &__item {
     @include maxw($xl) {
       
       margin: 10px 10px;
     }
   }
+  
   .insights__item:not(:last-child) {
     @include maxw($lg) {
       margin-right: 10px;

@@ -4,6 +4,7 @@
   margin-top: -248px;
   padding-top: 245px;
   margin-bottom: 35px;
+
   &__list {
     display:flex;
     padding-bottom: 65px;
@@ -46,10 +47,10 @@
     @include maxw($xl) {
       padding-bottom: 20px;
     }
+
     @include maxw($sm) {
       padding-bottom: 0;
     }
-   
   }
 
   &__img {
@@ -67,8 +68,6 @@
     @include maxw($sm) {
       height: 70px;
     }
-   
   }
-  
 }
 
