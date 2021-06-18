@@ -1,33 +1,73 @@
+
 .partners {
-  text-align: center;
-  position: relative;
- 
-  &:before {
-    content:'';
-    position: absolute;
-    background-color: #fcd7b6;
-    opacity: 0.2;
-    height: 437px;
-    top: -270px;
-    left: 0;
-    right: 0;
-    z-index: -1;
-  }
+  background-color: rgba(#fcd7b6, 0.2);
+  margin-top: -248px;
+  padding-top: 245px;
+  margin-bottom: 35px;
 
   &__list {
     display:flex;
+    padding-bottom: 65px;
+  }
+ 
+  &__item {
+    margin: 0 50px;
+    height: 120px;
+    display: flex;
     align-items: center;
+    width: 150px;
+  }
+  
+  &__img {
+    z-index: 6;
+    display: inline-block;
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+  } 
+}
+
+/*media*/
+ 
+.partners {
+
+  @include maxw($xl) {
+    padding-top: 0;
+    margin-top: -65px;
+    margin-bottom: 0;
+    background-color: transparent;
   }
 
-  &__item {
-    margin-right: 100px;
+  @include maxw($md) {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    @include maxw($xl) {
+      padding-bottom: 20px;
+    }
+
+    @include maxw($sm) {
+      padding-bottom: 0;
+    }
   }
 
   &__img {
-    display: inline-block;
+    @include maxw($xl) {
+      width: 100px;
+      height: 145px;
+    }
+
+    @include maxw($sm) {
+      width: 90px;
+      height: 70px;
+    }
   }
-  
-  &__link {
-    cursor: pointer;
+  &__item {
+    @include maxw($sm) {
+      height: 70px;
+    }
   }
 }
+

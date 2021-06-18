@@ -1,0 +1,30 @@
+
+.mix-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__btn {
+    color: $grey8b;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    border: transparent;
+  }
+
+  @include maxw($lg) {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    @include maxw($sm) {
+      padding: 15px 0;
+    }
+  }
+}  

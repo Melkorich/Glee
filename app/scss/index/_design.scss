@@ -1,10 +1,9 @@
 .design {
-
   padding-bottom: 120px;
   text-align: center;
 
   &__title {
-    margin-bottom: 29px;
+    margin-bottom: 15px;
   }
 
   &__items {
@@ -12,54 +11,142 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 34px 30px;
   }
-}
 
-.design-item {
+  .mixitup-control-active {
+    color: $red3e;
+  }
+}
+ 
+.design-card {
   background-color: #f8f8f8;
-  max-width: 370px;
-  width: 100%;
-  min-height: 246px;
   text-align: left;
-  padding: 30px 38px;
   font-family: 'DMSans';
   font-weight: 700;
   position: relative;
-  background-position: right bottom 20px;
-  background-repeat: no-repeat;
-  cursor: pointer;
+  transition: background-color 1s, box-shadow 1s;
+  width: 370px;
+  height: 246px;
   overflow: hidden;
-  transition: background-color 1s;
   
-  &:hover {
-    background-color: $orange-bg;
-    .design-item__title {
-      transform: scale(1.2);
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 35px 0 0 35px;
+  }
+    
+  &__title {
+    max-width: 171px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: $black1a;
+    transition: transform 0.6s;
+    @include line-climp(2);
+  }
+  
+  &__type {
+    color: $greyc8;
+    @include line-climp(3);
+    max-width: 70px;
+  }
+
+  &__box {
+    position: absolute;
+    right: -25px;
+    bottom: 15px;
+    max-width: 300px;
+    height: 150px;
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 269px;
+    height: 150px;
+  }
+}
+
+
+
+/*media*/
+
+.design {
+  @include maxw($xl) {
+    display: flex;
+  }
+
+  @include maxw($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include maxw($sm) {
+    padding-bottom: 50px;
+  }
+
+  &__list {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__items {
+    @include maxw($xl) {
+      grid-gap: 25px 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include maxw($xs) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      min-width: 100%;
+      justify-content: center;
+    }
+
+    @include maxw($lg) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
+  }
+ 
+}
+
+.design-card  {
+
+  @include maxw($xs) {
+    width: 271px;
+    height: 190px;
+  }
+
+  @include maxw($lg) {
+    margin-right: 0;
+  }
+
+  &__box {
+    @include maxw($lg) {
+      max-width: 220px;
+      right: 0;
+    }
+
+    @include maxw($xs) {
+      height: 120px;
+    }
+    
+  }
+  &__link {
+    @include maxw($lg) {
+      padding: 20px 0 0 20px;
     }
   }
 
-  &:hover:nth-child(2n) {
-    background-color: rgb(171, 226, 171);
-  }
-  &:hover:nth-child(3n) {
-    background-color: rgb(172, 230, 222);
-  }
-  &:hover:nth-child(6n) {
-    background-color: rgb(215, 230, 89);
+  &__img {
+    @include maxw($xs) {
+      width: 130px;
+      height: 120px;
+    }
   }
 
   &__title {
-    max-width: 171px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: $black2;
-    transition: transform 0.6s;
-  }
-
-  &__type {
-    color: $grey1;
-  }
-
-  &--chair {
-    background-position: center right 20px;
+    @include maxw($xs) {
+      font-size: 18px;
+    }
   }
 }

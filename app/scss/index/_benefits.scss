@@ -1,36 +1,41 @@
 
 .benefits {
 
-  &__inner {
+  &__list {
+    @include flexible ();
     background-color: rgba($orange-bg, 0.2);
   }
 
-  &__list {
-    @include flexible ();
-  }
-
-  &__list:first-child {
-    border-right: 1px solid #0000;
-  }
-
   &__item {
-    max-width: 570px;
-    margin: 0 auto;
-    padding: 30px 0 46px 80px;
+    flex-grow: 1;
+    height: 171px;
+    position: relative;
+    justify-content: start;
+    padding: 45px 30px 30px 220px;
+
+    &::before {
+      content:'';
+      position: absolute;
+      width: 1px;
+      right: 14px;
+      bottom: 0;
+      top: 0;
+    }
+
+    &:not(:last-child)::before {
+      border: 1px solid rgba($blue4d, 0.1);
+    }
   }
 
-  &__title {
-    color: $red9;
-    font-family: 'DMSans', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2.2;
+  &__box {
     position: relative;
+    font-family: 'DMSans', sans-serif;
+
     &::before {
       content:"";
       position: absolute;
-      left: -84px;
-      top: 3px;
+      left:-75px;
+      top: 10px;
       width: 54px;
       height: 53px;
       object-fit: contain;
@@ -38,23 +43,84 @@
     }
 
     &--support::before {
-      background-image:url('../images/benefits/support.svg');
+      background-image:url('../images/icons/support.svg');
     }
 
     &--delivery::before {
-      background-image:url('../images/benefits/delivery.svg');
+      background-image:url('../images/icons/delivery.svg');
     }
 
     &--payment::before {
-      background-image:url('../images/benefits/payment.svg');
+      background-image:url('../images/icons/payment.svg');
     }
   }
  
+  &__title {
+    color: $red41;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.1;
+    display: block;
+    @include line-climp(1);
+  }
+ 
   &__text {
-    font-family: 'DMSans', sans-serif;
     font-weight: 400;
-    line-height: 1.9;
-    color: $grey7;
-    width: 215px;
+    line-height: 1.6;
+    max-width: 215px;
+    color: $grey58;
+    @include line-climp(2);
   }
 }
+
+/*media */
+
+  .benefits {
+
+    &__list {
+      @include maxw($md) {
+        flex-direction: column;
+        margin: 0 auto;
+      }
+    }
+
+    &__item {
+      @include maxw($xxl) {
+        padding-left: 100px;
+      }
+
+      @include maxw($lg) {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &:not(:last-child)::before {
+          border: 1px solid transparent;
+        }
+      }
+
+      @include maxw($md) {
+        display: block;
+        width: 100%;
+        vertical-align: middle;
+        min-width: 100%;
+        padding: 15px 0 0 0;
+        height: 130px;
+      }
+    }
+
+    &__box  {
+
+      @include maxw($lg) {
+        &::before {
+          background-image: none;
+        }
+      }
+
+      @include maxw($md) {
+        display: inline-block;
+      }
+    }
+  }

@@ -1,0 +1,46 @@
+
+.main-link {
+  background-color: #a3bbc8;
+  padding: 21px 27px;
+  display: inline-block;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.25;
+  border: transparent;
+  outline: transparent;
+  color: $whiteff;
+  width: 200px;
+  position: relative;
+  text-align: start;
+  overflow: hidden;
+  @extend %btn;
+  @include line-climp(1);
+
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 9px;
+  }
+}
+
+.btn-circle {
+  width: 51px;
+  height: 51px;
+  background-color: $whitf4;
+  border-radius: 50%;
+  border: transparent;
+  outline: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %circle-animation;
+  
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}

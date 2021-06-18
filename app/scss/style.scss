@@ -1,13 +1,21 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
+@import 'mixin';
 @import 'reset';
 @import 'libs';
 @import 'global';
+@import 'media';
 
 
 /*general*/
 @import "components/header";
 @import "components/footer";
+@import "components/video";
+@import "components/insights";
+@import "components/animation";
+@import "components/buttons";
+@import "components/animation-cards";
+@import "components/filter";
 
 /*home page*/
 
@@ -15,11 +23,11 @@
 @import "index/benefits";
 @import "index/products";
 @import "index/design";
-@import "index/video";
-@import "index/insights";
+@import "index/partners";
+
 
 
 /*about page*/
 
-
+ 
 

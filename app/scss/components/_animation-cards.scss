@@ -1,0 +1,43 @@
+/*тут пока оставляю только ховерный эффект,
+ пока не пойму почему не работаем фокус , не буду зацикливаться на этом, оставлю пока так.
+ вообще хочу только ховер оставить*/
+
+.design__item {
+  transition: background-color 1s, box-shadow 1s;
+ 
+  &:hover {
+    .design-card  {
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.5);
+      background-color: $orange-bg;
+    }
+   
+    .design-card__title {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(3n-1){
+      .design-card {
+        background-color: rgb(188, 233, 188);
+      }
+    }
+  
+    &:nth-child(4n-1){
+      .design-card {
+        background-color: rgb(172, 230, 222);
+      }
+    }
+  
+    &:nth-child(5n-1) {
+      .design-card {
+        background-color: rgb(224, 233, 141);
+      }
+    }
+  
+    &:nth-child(6n-1) {
+      .design-card {
+        background-color: rgb(238, 206, 236);
+      } 
+    }
+  }
+}
+

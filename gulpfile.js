@@ -12,7 +12,7 @@ const svgSprite = require('gulp-svg-sprite');
 
 
 function svgSprites(){
-  return src('app/images/pre-sprites/**.svg')
+  return src('app/images/icons/**.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -20,7 +20,7 @@ function svgSprites(){
         }
       }
     }))
-    .pipe(dest('app/images/sprites'))
+    .pipe(dest('app/images'))
 }
 
 function browsersync(){
@@ -91,7 +91,7 @@ function cleanDist(){
 }
 
 function htmlInclude() {
-  return src('app/html/*.html')
+  return src(['app/html/*.html'])
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
@@ -101,13 +101,11 @@ function htmlInclude() {
 }
 
 
-
-
 function watching(){
   watch(['app/scss/**/*.scss'], styles);
-  watch(['./src/*.html'], htmlInclude);
+  watch(['app/htm/**/*.html'], htmlInclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/images/pre-sprites/**.svg'], svgSprites);
+  watch(['app/images/icons/**.svg'], svgSprites);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 

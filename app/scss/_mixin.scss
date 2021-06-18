@@ -1,0 +1,14 @@
+@mixin flexible () {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin line-climp ($row) {
+  -webkit-line-clamp: $row; 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical;
+  overflow: hidden; 
+} 
+
+
