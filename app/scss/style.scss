@@ -12,10 +12,12 @@
 @import "components/footer";
 @import "components/video";
 @import "components/insights";
-@import "components/animation";
-@import "components/buttons";
-@import "components/animation-cards";
 @import "components/filter";
+
+@import "buttons/buttons";
+
+@import "animation/animation";
+@import "animation/animation-cards";
 
 /*home page*/
 

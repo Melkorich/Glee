@@ -7,8 +7,9 @@
   }
 
   &__item {
-    flex-grow: 1;
     height: 171px;
+    width: 590px;
+    max-width: 100%;
     position: relative;
     justify-content: start;
     padding: 45px 30px 30px 220px;
