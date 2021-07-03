@@ -16,7 +16,7 @@ $xs: 480px;
     @content;
   }
 }
-
+ 
 @mixin maxh($width) {
   @media (max-height: $width) {
     @content;
@@ -27,4 +27,4 @@ $xs: 480px;
   @media (min-height: $width) {
     @content;
   }
-}
+} 

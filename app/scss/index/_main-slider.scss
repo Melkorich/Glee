@@ -1,6 +1,15 @@
 
 .main-slider {
-  padding-top: 154px;
+  padding-top: 150px;
+
+  @include maxw($xl) {
+    padding-top: 84px;
+  }
+
+  @include maxw($md) {
+    text-align: center;
+    justify-content: center;
+  }
   
   &__inner {
     background-color: $orange-bg;
@@ -26,6 +35,40 @@
       border-radius: 50%;
       background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,1) 100%);
     }
+
+    @include maxw($xxl) {
+      height: 790px;
+      padding-right: 65px;
+      &::before {
+        right: 0;
+      }
+    }
+
+    @include maxw($xl) {
+      height: 730px;
+      padding-right: 0;
+      &::before {
+        width: 560px;
+        height: 560px;
+        top: 90px;
+        background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,0.7) 100%);
+      }
+    }
+
+    @include maxw($lg) {
+      height: 580px;
+      &::before {
+        display: none;
+      }
+    }
+
+    @include maxw($md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+    }
   }
 
   &__content {
@@ -34,6 +77,21 @@
     width: 100%;
     overflow: hidden;
     @include line-climp(2);
+
+    @include maxw($xxl) {
+      width: 411px;
+    }
+
+    @include maxw($md) {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px 0;
+      min-height: 230px;
+    }
+
+    @include maxw($sm) {
+      min-height: 250px;
+    }
   }
 
   &__title {
@@ -45,6 +103,21 @@
     text-transform: uppercase;
     margin-bottom: 28px;
     @include line-climp(3);
+
+    @include maxw($xl) {
+      font-size: 60px;
+    }
+
+    @include maxw($lg) {
+      font-size: 40px;
+    }
+
+    @include maxw($md) {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -55,6 +128,17 @@
     max-width: 370px;
     @include line-climp(4);
     letter-spacing: 0.2px;
+
+    @include maxw($xl) {
+      max-width: 360px;
+    }
+
+    @include maxw($md) {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 25px 0;
+      padding: 0;
+    }
   }
 
   &__imgbox {
@@ -64,6 +148,21 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @include maxw($xxl) {
+      max-width: 610px;
+    }
+
+    @include maxw($md) {
+      max-width: 450px;
+      max-height: 250px;
+      margin: 0;
+    }
+
+    @include maxw($sm) {
+      max-width: 230px;
+      max-height: 170px;
+    }
   }
 
   &__img {
@@ -71,6 +170,21 @@
     height: 100%;
     object-fit: contain;
     z-index: 6;
+
+    @include maxw($xl) {
+      width: 90%;
+      height: 100%;
+    }
+
+    @include maxw($md) {
+      width: 300px;
+      height: 200px;
+    }
+
+    @include maxw($sm) {
+      width: 230px;
+      height: 170px;
+    }
   }
 
   .slick-dots {
@@ -81,6 +195,10 @@
     right: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+
+    @include maxw($md) {
+      bottom: 15px;
+    }
 
     li {
       padding: 0 5px;
@@ -118,128 +236,7 @@
       color: $black1a;
     }
   }
-}
 
-/*media*/
-
-
-.main-slider {
-  @include maxw($md) {
-    text-align: center;
-    justify-content: center;
-  }
-
-  &__content {
-    @include maxw($xxl) {
-      width: 411px;
-    }
-  }
-
-  &__wrapper {
-    @include maxw($xxl) {
-      height: 790px;
-      padding-right: 65px;
-      &::before {
-        right: 0;
-      }
-    }
-
-    @include maxw($xl) {
-      height: 730px;
-      padding-right: 0;
-      &::before {
-        width: 560px;
-        height: 560px;
-        top: 90px;
-        background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,0.7) 100%);
-      }
-    }
-
-    @include maxw($lg) {
-      height: 580px;
-      &::before {
-        display: none;
-      }
-    }
-
-    @include maxw($md) {
-      flex-direction: column;
-      align-items: center;
-      padding: 50px 10px;
-      height: 460px;
-    }
-
-    @include maxw($xs) {
-      padding-top: 35px;
-    }
-  }
-
-  &__imgbox {
-    @include maxw($xxl) {
-      max-width: 610px;
-    }
-
-    @include maxw($lg) {
-      background-image: none !important;
-      max-width: 470px;
-      height: 400px;
-      justify-content: flex-end;
-    }
-  }
-
-  &__content {
-    @include maxw($sm) {
-      max-width: 320px;
-      padding: 0 30px;
-    }
-  }
-
-  &__title {
-    @include maxw($xl) {
-      font-size: 60px;
-    }
-
-    @include maxw($lg) {
-      font-size: 50px;
-    }
-
-    @include maxw($md) {
-      display: block;
-      width: 100%;
-      margin-bottom: 25px;
-    }
-
-    @include maxw($sm) {
-      font-size: 45px;
-      max-width: 100%;
-    }
-  }
-
-  &__text {
-    @include maxw($xl) {
-      max-width: 360px;
-    }
-
-    @include maxw($md) {
-      display: inline-block;
-      width: 100%;
-      margin: 0px;
-      margin-bottom: 25px;
-      padding: 0;
-    }
-  }
-
-  &__img {
-    @include maxw($xl) {
-      width: 90%;
-      height: 100%;
-    }
-
-    @include maxw($md) {
-      display: none !important;
-    }
-  }
-  
   &__link {
     @include maxw($md) {
      margin: 0 auto;

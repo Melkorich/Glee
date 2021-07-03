@@ -4,7 +4,19 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @include maxw($sm) {
+      font-size: 30px;
+      padding: 0 15px;
+    }
   }
+
+  &__filters {
+    @include maxw($sm) {
+      margin-bottom: 50px;
+    }
+  }
+
 
   .mixitup-control-active {
     color: $red3e;
@@ -14,6 +26,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     &--container {
       max-width: 1230px;
       margin: 0 auto;
@@ -46,6 +59,10 @@
     box-shadow: 0 6px 47px 3px rgba(238, 188, 144, 0.5);
   }
 
+  @include maxw($md) {
+    padding: 10px;
+  }
+
   &__img-box {
     width: 230px;
     height: 200px;
@@ -76,7 +93,7 @@
 
   &:hover {
 
-    .product-card__list{
+    .product-card__list {
       transform: translateY(0);
     }
   }
@@ -121,17 +138,23 @@
 }
 
   
-
 .products-lamps {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
   padding: 150px 0 90px;
 
-  &__list {
-    display: grid;
-    grid-column-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+  @include maxw($xl) {
+    grid-gap: 50px 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  @include maxw($sm) {
+    padding-top: 60px;
   }
 }
-
 
 .product-lamp {
   display: flex;
@@ -141,8 +164,28 @@
   width: 100%;
   min-height: 390px;
   background-color: #feefe2;
-  padding: 0 140px 0 0;
+  padding: 5px 140px 5px 5px;
   position: relative;
+
+  @include maxw($xxl) {
+    padding: 5px;
+  }
+
+  @include maxw($xl) {
+    padding: 5px 10px;
+    margin: 0 auto;
+    max-width: 870px;
+    justify-content: center;
+    &:before {
+      display: none;
+    }
+  }
+
+  @include maxw($sm) {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
 
   &:before {
     content:''; 
@@ -170,7 +213,13 @@
 
   &__imgbox {
     margin-right: 70px;
-    flex-basis: 300px;
+    flex-basis: 250px;
+
+    @include maxw($md) {
+      margin: 0 auto;
+      padding: 0;
+      flex-basis: 185px;
+    }
   }
 
   &__imglink {
@@ -182,10 +231,23 @@
     img {
       position: absolute;
       height: 400px;
-      width: 230px;
+      min-width: 230px;
       bottom: -105px;
       right: -30px;
-      transition: transform 1s;;
+      transition: transform 1s;
+
+      @include maxw($md) {
+        height: 60%;
+        width: 70%;
+        min-width: 100px;
+        top: 0;
+        position: relative;
+       }
+ 
+       @include maxw($sm) {
+         width: 30%;
+         height: 30%;
+       }
     }
 
     &:hover img {
@@ -199,6 +261,17 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include maxw($md) {
+      padding: 0 10px;
+      width: 60%;
+      align-items: center;
+    }
+
+    @include maxw($sm) {
+      max-width: 260px;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -220,6 +293,13 @@
     max-width: 300px; 
     @include line-climp(4);
   }
+
+  .product-lamp__text {
+    @include maxw($sm) {
+      max-width: 250px; 
+    }
+  }
+
   &__link {
     background-color: transparent;
     border: 1px solid #436372;
@@ -231,90 +311,6 @@
     svg {
       width: 22px;
       height: 9px;
-    }
-  }
-}
-
-
-
-/*media*/
- 
-.products {
-
-  &__title {
-    @include maxw($sm) {
-      font-size: 30px;
-      padding: 0 15px;
-    }
-  }
-
-  &__filters {
-    @include maxw($sm) {
-      margin-bottom: 50px;
-    }
-  }
-}
-
-.product-card  {
-  @include maxw($md) {
-    padding: 10px;
-  }
-}
-
-.products-lamps {
-  @include maxw($sm) {
-    padding-top: 60px;
-  }
-}
-
-.products-lamps__list {
-  @include maxw($xxl) {
-    grid-gap: 50px 0;
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.product-lamp {
-  @include maxw($xxl) {
-    max-width: 100%;
-    justify-content: space-around;
-  }
-
-  @include maxw($sm) {
-    padding: 0px;
-    width: 100%;
-    &::before {
-      display: none;
-    }
-  }
-
-  @include maxw($sm) {
-    min-height: 320px;
-  }
-
-  &__imglink {
-    img {
-      @include maxw($xxl) {
-        height: 320px;
-        width: 200px;
-      }
-    } 
-  }
-
-  &__imgbox {
-    @include maxw($md) {
-      display: none;
-      margin: 0;
-      padding: 0;
-      flex-basis: content;
-    }
-  }
-
-  &__content {
-    @include maxw($sm) {
-      max-width: 300px;
-      width: 100%;
     }
   }
 }

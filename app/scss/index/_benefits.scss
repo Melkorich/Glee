@@ -4,6 +4,11 @@
   &__list {
     @include flexible ();
     background-color: rgba($orange-bg, 0.2);
+    
+    @include maxw($lg) {
+      flex-direction: column;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -25,6 +30,37 @@
 
     &:not(:last-child)::before {
       border: 1px solid rgba($blue4d, 0.1);
+    }
+
+    @include maxw($xxl) {
+      padding-left: 100px;
+    }
+
+    @include maxw($lg) {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &:nth-child(2) {
+        border-top: 1px solid rgba($blue4d, 0.1);
+        border-bottom: 1px solid rgba($blue4d, 0.1);
+      }
+
+      &:not(:last-child)::before {
+        border: none;
+      }
+    }
+
+    @include maxw($md) {
+      display: block;
+      width: 100%;
+      vertical-align: middle;
+      min-width: 100%;
+      padding: 15px 0 0 0;
+      height: 130px;
     }
   }
 
@@ -54,6 +90,16 @@
     &--payment::before {
       background-image:url('../images/icons/payment.svg');
     }
+
+    @include maxw($md) {
+      display: inline-block;
+    }
+
+    @include maxw($sm) {
+      &::before {
+        background-image: none;
+      }
+    }
   }
  
   &__title {
@@ -73,55 +119,3 @@
     @include line-climp(2);
   }
 }
-
-/*media */
-
-  .benefits {
-
-    &__list {
-      @include maxw($md) {
-        flex-direction: column;
-        margin: 0 auto;
-      }
-    }
-
-    &__item {
-      @include maxw($xxl) {
-        padding-left: 100px;
-      }
-
-      @include maxw($lg) {
-        padding: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        &:not(:last-child)::before {
-          border: 1px solid transparent;
-        }
-      }
-
-      @include maxw($md) {
-        display: block;
-        width: 100%;
-        vertical-align: middle;
-        min-width: 100%;
-        padding: 15px 0 0 0;
-        height: 130px;
-      }
-    }
-
-    &__box  {
-
-      @include maxw($lg) {
-        &::before {
-          background-image: none;
-        }
-      }
-
-      @include maxw($md) {
-        display: inline-block;
-      }
-    }
-  }

@@ -6,8 +6,16 @@
   margin-bottom: 35px;
 
   &__list {
-    display:flex;
+    display: flex;
     padding-bottom: 65px;
+
+    @include maxw($xl) {
+      padding-bottom: 20px;
+    }
+
+    @include maxw($sm) {
+      padding-bottom: 0;
+    }
   }
  
   &__item {
@@ -16,6 +24,10 @@
     display: flex;
     align-items: center;
     width: 150px;
+
+    @include maxw($sm) {
+      height: 70px;
+    }
   }
   
   &__img {
@@ -24,12 +36,17 @@
     width: 150px;
     height: 120px;
     object-fit: contain;
-  } 
-}
 
-/*media*/
- 
-.partners {
+    @include maxw($xl) {
+      width: 100px;
+      height: 145px;
+    }
+
+    @include maxw($sm) {
+      width: 90px;
+      height: 70px;
+    }
+  } 
 
   @include maxw($xl) {
     padding-top: 0;
@@ -42,32 +59,6 @@
     margin-top: 0px;
     margin-bottom: 20px;
   }
-
-  &__list {
-    @include maxw($xl) {
-      padding-bottom: 20px;
-    }
-
-    @include maxw($sm) {
-      padding-bottom: 0;
-    }
-  }
-
-  &__img {
-    @include maxw($xl) {
-      width: 100px;
-      height: 145px;
-    }
-
-    @include maxw($sm) {
-      width: 90px;
-      height: 70px;
-    }
-  }
-  &__item {
-    @include maxw($sm) {
-      height: 70px;
-    }
-  }
 }
 
+ 

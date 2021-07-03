@@ -50,26 +50,24 @@
             </svg>
           </button>
 
-          <a class="user-nav__heart amination-nav show" href="#">
-            <span class="sr-only">Favourites</span>
-            <span class="user-nav__wrap">
-              <svg>
-                <use xlink:href=images/sprite.svg#heart></use>
-              </svg>
-              <span class="user-nav__num">0</span>
-            </span>
-          </a>
+          <div class="user-nav__item amination-nav">
+            <a class="user-nav__item--heart show" href="#">
+              <span class="sr-only">Favourites</span>
+                <svg>
+                  <use xlink:href=images/sprite.svg#heart></use>
+                </svg>
+                <span class="user-nav__num">0</span>
+            </a>
 
-          <a class="user-nav__basket amination-nav show" href="#">
-            <span class="sr-only">your basket</span>
-            <span class="user-nav__wrap">
-            <svg>
-              <use xlink:href=images/sprite.svg#basket></use>
-            </svg>
-              <span class="user-nav__num">0</span>
-            </span>
-          </a>
-    
+            <a class="user-nav__item--basket show" href="#">
+              <span class="sr-only">your basket</span>
+              <svg>
+                <use xlink:href=images/sprite.svg#basket></use>
+              </svg>
+                <span class="user-nav__num">0</span>
+            </a>
+          </div>
+
           <button class="user-nav__navigation btn-circle">
             <span class="sr-only">navigation menu</span>
             <svg class="use-nav__btn-menu">
@@ -589,67 +587,68 @@
       </ul> 
 
 
-      <div class="products-lamps">
-        <div class="container container--big">
-          <ul class="products-lamps__list">
+  
+      <div class="container container--big">
+        <ul class="products-lamps">
 
-            <li class="products-lapms__item">
-              <article class="product-lamp">
-       
-                <div class="product-lamp__imgbox">
-                  <a class="product-lamp__imglink" href="#">
-                    <img src="images/lamps/lamp1.png" alt="lamp">
-                  </a>
+          <li class="products-lapms__item">
+            <article class="product-lamp">
+     
+              <div class="product-lamp__imgbox">
+                <a class="product-lamp__imglink" href="#">
+                  <img src="images/lamps/lamp1.png" alt="lamp">
+                </a>
+              </div>
+              <div class="product-lamp__content">
+                <h3 class="product-lamp__title">
+                  Mirum Notare Tellus
+                </h3>
+                <div class="product-lamp__text">
+                  <p>
+                    LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                  </p>
                 </div>
-                <div class="product-lamp__content">
-                  <h3 class="product-lamp__title">
-                    Mirum Notare Tellus
-                  </h3>
-                  <div class="product-lamp__text">
-                    <p>
-                      LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-                    </p>
-                  </div>
-                  <a class="product-lamp__link main-link" href="#!">
-                      View More
-                    <svg class="arrow-right--dark">
-                      <use xlink:href=images/sprite.svg#arrow-right-black></use>
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            </li>
+                <a class="product-lamp__link main-link" href="#!">
+                    View More
+                  <svg class="arrow-right--dark">
+                    <use xlink:href=images/sprite.svg#arrow-right-black></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </li>
 
-            <li class="products-lapms__item">
-              <article class="product-lamp product-lamp--gradienteffect">
-       
-                <div class="product-lamp__imgbox">
-                  <a class="product-lamp__imglink" href="#">
-                    <img src="images/lamps/lamp2.png" alt="lamp">
-                  </a>
+          <li class="products-lapms__item">
+            <article class="product-lamp product-lamp--gradienteffect">
+     
+              <div class="product-lamp__imgbox">
+                <a class="product-lamp__imglink" href="#">
+                  <img src="images/lamps/lamp2.png" alt="lamp">
+                </a>
+              </div>
+              <div class="product-lamp__content">
+                <h3 class="product-lamp__title">
+                  Malesuada Tempor Euismod
+                </h3>
+                <div class="product-lamp__text">
+                  <p>
+                    50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
+                  </p>
                 </div>
-                <div class="product-lamp__content">
-                  <h3 class="product-lamp__title">
-                    Malesuada Tempor Euismod
-                  </h3>
-                  <div class="product-lamp__text">
-                    <p>
-                      50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-                    </p>
-                  </div>
-                  <a class="product-lamp__link main-link" href="#!">
-                      View More
-                    <svg class="arrow-right--dark">
-                      <use xlink:href=images/sprite.svg#arrow-right-black></use>
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            </li>
-            
-          </ul>  
-        </div>
+                <a class="product-lamp__link main-link" href="#!">
+                    View More
+                  <svg class="arrow-right--dark">
+                    <use xlink:href=images/sprite.svg#arrow-right-black></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </li>
+        </ul>  
       </div>
+
+        
+   
     </section>
 
     <section class="design" data-ref="container-2">
@@ -896,7 +895,7 @@
  
     <div class="partners">
       <div class="container">
-        <ul class="partners__list partners-slider">
+        <ul class="partners__list">
           <li class="partners__item">
             <img class="partners__img" src="images/partners/1.png" alt="partner">
           </li>
@@ -915,7 +914,7 @@
         </ul>
       </div>
     </div>
-   
+    
 
 
   </main>
