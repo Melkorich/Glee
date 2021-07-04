@@ -1,0 +1,73 @@
+.products-week {
+  padding-top: 60px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include maxw($sm) {
+      font-size: 30px;
+      padding: 0 15px;
+    }
+  }
+
+  &__filters {
+    @include maxw($sm) {
+      margin-bottom: 50px;
+    }
+  }
+ 
+
+  .mixitup-control-active {
+    color: $red3e;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--container {
+      max-width: 1230px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+  }
+}
+
+.products-week__item {
+  margin-bottom: 40px;
+  margin-right: 30px;
+}
+
+
+/* лампы*/ 
+
+.products-lamps {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 150px 0 90px;
+
+  @include maxw($xl) {
+    grid-gap: 50px 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  @include maxw($sm) {
+    padding-top: 60px;
+  }
+}
+
+
+.title {
+  @include maxw($md) {
+    font-size: 30px;
+  }
+
+  @include maxw($sm) {
+    font-size: 23px;
+  }
+}

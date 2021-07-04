@@ -9,7 +9,7 @@ $(document).ready(function(){
 $(function(){
 
   $(window).scroll(function(){
-    if ($(document).scrollTop() > 100) {
+    if ($(document).scrollTop() > 50) {
       $(".header").addClass("header--scroll");
     } else {
       $(".header").removeClass("header--scroll");

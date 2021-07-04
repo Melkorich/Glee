@@ -1,0 +1,158 @@
+.product-lamp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 870px;
+  width: 100%;
+  min-height: 390px;
+  background-color: #feefe2;
+  padding: 5px 140px 5px 5px;
+  position: relative;
+
+  @include maxw($xxl) {
+    padding: 5px;
+  }
+
+  @include maxw($xl) {
+    padding: 5px 10px;
+    margin: 0 auto;
+    max-width: 870px;
+    justify-content: center;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  @include maxw($sm) {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+
+  &:before {
+    content:''; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image:linear-gradient(to left, $orange-bg 25%, $whiteff 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  &--gradienteffect::before {
+    background-image:linear-gradient(to right, $orange-bg 25%, $whiteff 100%);
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &__imgbox {
+    margin-right: 70px;
+    flex-basis: 250px;
+
+    @include maxw($md) {
+      margin: 0 auto;
+      padding: 0;
+      flex-basis: 185px;
+    }
+  }
+
+  &__imglink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 400px;
+      min-width: 230px;
+      bottom: -105px;
+      right: -30px;
+      transition: transform 1s;
+
+      @include maxw($md) {
+        height: 60%;
+        width: 70%;
+        min-width: 100px;
+        top: 0;
+        position: relative;
+       }
+ 
+       @include maxw($sm) {
+         width: 30%;
+         height: 30%;
+       }
+    }
+
+    &:hover img {
+      transform: translateX(-20px);
+    }
+  }
+
+  &__content {
+    text-align: left;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include maxw($md) {
+      padding: 0 10px;
+      width: 60%;
+      align-items: center;
+    }
+
+    @include maxw($sm) {
+      max-width: 260px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    color: $blue4d;
+    font-family: 'DMSans', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    max-width: 260px;
+    @include line-climp(2);
+  }
+
+  &__text {
+    color: $blue4d;
+    font-family: "Rubik", sans-serif;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 300px; 
+    @include line-climp(4);
+  }
+
+  .product-lamp__text {
+    @include maxw($sm) {
+      max-width: 250px; 
+    }
+  }
+ 
+  &__link {
+    background-color: transparent;
+    border: 1px solid #436372;
+    padding: 21px 19px;
+    border-radius: 5px;
+    color: $blue72;
+    max-width: 180px;
+
+    svg {
+      width: 22px;
+      height: 9px;
+    }
+  }
+}

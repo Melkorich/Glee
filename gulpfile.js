@@ -11,6 +11,16 @@ const fileinclude = require('gulp-file-include');
 const svgSprite = require('gulp-svg-sprite');
 
 
+function htmlInclude() {
+  return src(['app/html/index.html'])
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@file'
+  }))
+  .pipe(dest('./app'))
+  .pipe(browserSync.stream());
+}
+
 function svgSprites(){
   return src('app/images/icons/**.svg')
     .pipe(svgSprite({
@@ -90,20 +100,10 @@ function cleanDist(){
   return del('dist')
 }
 
-function htmlInclude() {
-  return src(['app/html/*.html'])
-  .pipe(fileinclude({
-    prefix: '@@',
-    basepath: '@file'
-  }))
-  .pipe(dest('./app'))
-  .pipe(browserSync.stream());
-}
-
 
 function watching(){
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/htm/**/*.html'], htmlInclude);
+  watch(['app/html/**/*.html'], htmlInclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/images/icons/**.svg'], svgSprites);
   watch(['app/**/*.html']).on('change', browserSync.reload);

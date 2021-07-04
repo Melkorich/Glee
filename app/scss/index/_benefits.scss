@@ -12,7 +12,6 @@
   }
 
   &__item {
-    height: 171px;
     width: 590px;
     max-width: 100%;
     position: relative;
@@ -106,7 +105,7 @@
     color: $red41;
     font-weight: 700;
     font-size: 18px;
-    line-height: 2.1;
+    line-height: 2;
     display: block;
     @include line-climp(1);
   }

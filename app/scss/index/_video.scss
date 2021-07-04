@@ -10,6 +10,26 @@
   align-items: center;
   justify-content: center;
 
+  @include maxw($xl) {
+    height: 470px;
+    margin-bottom: 80px;
+  }
+
+  @include maxw($lg) {
+    height: 400px;
+    margin-bottom: 60px;
+  }
+
+  @include maxw($md) {
+    height: 370px;
+    margin-bottom: 50px;
+  }
+
+  @include maxw($sm) {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
   &__play {
     width: 22px;
     height: 25px;
@@ -68,20 +88,19 @@
       fill: #fc8015;
     }
     .video__img-box {
-
       &::before {
         opacity: 0.6;
         background-color: $orange-bg;
         width: 75px;
         height: 75px;
-        animation: radial-pulse 1s infinite;
+        animation: radial-pulse 1s;
       }
 
       &::after {
         width: 200px;
         height: 200px;
         background-color: $orange-bg;
-        animation: radial-pulse 1s infinite;
+        animation: radial-pulse 1s;
       }
     }
   }
@@ -108,30 +127,5 @@
 
   100% {
     box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
-  }
-}
-
-/*media*/ 
-
-.video {
-
-  @include maxw($xl) {
-    height: 470px;
-    margin-bottom: 80px;
-  }
-
-  @include maxw($lg) {
-    height: 400px;
-    margin-bottom: 60px;
-  }
-
-  @include maxw($md) {
-    height: 370px;
-    margin-bottom: 50px;
-  }
-
-  @include maxw($sm) {
-    height: 300px;
-    margin-bottom: 30px;
   }
 }

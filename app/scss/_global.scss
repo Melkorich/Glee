@@ -26,16 +26,18 @@ body {
     max-width: 1800px;
   }
 }
-
+ 
 .logo {
   position: relative;
-  z-index: 5;
-}
-
-.logo__img {
   max-width: 146px;
   max-height: 39px;
+  z-index: 5;
+}
+ 
+.logo__img {
   object-fit: contain;
+  width: 100%;
+  height: 100%;
 }  
 
 .sr-only {

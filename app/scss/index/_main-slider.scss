@@ -39,6 +39,7 @@
     @include maxw($xxl) {
       height: 790px;
       padding-right: 65px;
+
       &::before {
         right: 0;
       }
@@ -47,6 +48,7 @@
     @include maxw($xl) {
       height: 730px;
       padding-right: 0;
+
       &::before {
         width: 560px;
         height: 560px;
@@ -57,6 +59,7 @@
 
     @include maxw($lg) {
       height: 580px;
+
       &::before {
         display: none;
       }
@@ -142,8 +145,8 @@
   }
 
   &__imgbox {
-    max-width: 640px;
-    height: 580px;
+    max-width: 630px;
+    height: 490px;
     overflow: hidden;
     display: flex;
     align-items: center;
