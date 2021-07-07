@@ -1,36 +1,10 @@
 <section class="products-week" data-ref="container-1">
-  <h2 class="title products__title">
+  <h2 class="title products-week__title">
     Products of the week
   </h2> 
 
   <div class="container">
-    <ul class="products-week__filters mix-filter">
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn animation" type="button" data-filter="all">
-          All
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn animation" type="button" data-filter=".category-a">
-          Furnitures
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn animation" type="button" data-filter=".category-b">
-          Chairs
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn animation" type="button" data-filter=".category-c">
-          Lighting
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn animation" type="button" data-filter=".category-d">
-          Decor
-        </button>
-      </li>
-    </ul>
+    @@include('../components/filters/_products-week__filter.html')
   </div>
 
   <ul class="products-week__items products-week__items--container">

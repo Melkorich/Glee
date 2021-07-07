@@ -37,11 +37,12 @@
     background-color: $greyc8;
     @include line-climp(2);
     transition: background-color 0.8s, color 0.6s;
+    cursor: pointer;
 
     &:focus {
       background-color: $blue72;
     }
-
+ 
     &:hover {
       background-color: $blue4d;
       color: $orange-bg;
