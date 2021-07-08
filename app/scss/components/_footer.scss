@@ -87,7 +87,7 @@
     text-transform: uppercase;
     font-size: 16px;
     min-width: 270px;
-    @include line-climp(1);
+    @include line-climp(2);
   }
 
   &__item:not(:last-child) {

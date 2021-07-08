@@ -1,0 +1,29 @@
+.btn-animation {
+  transition: background-color 1s, color 0.5s, opacity 0.1s;
+
+  svg {
+    transition: fill 1s;
+  }
+
+  &:focus {
+    background-color: $blue72;
+    color: $orange-bg;
+
+    svg {
+      fill: $whiteff;
+    }
+  }
+
+  &:hover {
+    background-color: $blue4d;
+    color: $orange-bg;
+
+    svg {
+      fill: $orange-bg;
+    }
+  }
+ 
+  &:active {
+    opacity: 0.6;
+  } 
+}

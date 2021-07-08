@@ -1,4 +1,4 @@
-.product-lamp {
+.lamp-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,9 +19,6 @@
     max-width: 870px;
     justify-content: center;
 
-    &:before {
-      display: none;
-    }
   }
 
   @include maxw($sm) {
@@ -37,7 +34,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image:linear-gradient(to left, $orange-bg 25%, $whiteff 100%);
+    background-image:linear-gradient(to bottom, $orange-bg 25%, $whiteff 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,15 +42,12 @@
     transition: opacity 0.5s linear;
   }
 
-  &--gradienteffect::before {
-    background-image:linear-gradient(to right, $orange-bg 25%, $whiteff 100%);
-  }
 
   &:hover::before {
     opacity: 1;
   }
 
-  &__imgbox {
+  &__img-box {
     margin-right: 70px;
     flex-basis: 250px;
 
@@ -64,36 +58,36 @@
     }
   }
 
-  &__imglink {
+  &__img-link {
     display: block;
     width: 100%;
     height: 100%;
     position: relative;
 
-    img {
-      position: absolute;
-      height: 400px;
-      min-width: 230px;
-      bottom: -105px;
-      right: -30px;
-      transition: transform 1s;
-
-      @include maxw($md) {
-        height: 60%;
-        width: 70%;
-        min-width: 100px;
-        top: 0;
-        position: relative;
-       }
- 
-       @include maxw($sm) {
-         width: 30%;
-         height: 30%;
-       }
-    }
-
     &:hover img {
       transform: translateX(-20px);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    height: 400px;
+    min-width: 230px;
+    bottom: -105px;
+    right: -30px;
+    transition: transform 1s;
+
+    @include maxw($md) {
+      height: 60%;
+      width: 70%;
+      min-width: 100px;
+      top: 0;
+      position: relative;
+    }
+
+    @include maxw($sm) {
+      width: 30%;
+      height: 30%;
     }
   }
 
@@ -134,9 +128,7 @@
     margin-bottom: 30px;
     max-width: 300px; 
     @include line-climp(4);
-  }
 
-  .product-lamp__text {
     @include maxw($sm) {
       max-width: 250px; 
     }

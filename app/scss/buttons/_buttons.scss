@@ -10,12 +10,10 @@
   border: transparent;
   outline: transparent;
   color: $whiteff;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   position: relative;
-  text-align: start;
   overflow: hidden;
-  @extend %btn;
-  @include line-climp(1);
 
   svg {
     position: absolute;
@@ -37,9 +35,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @extend %circle-animation;
   
-  & svg {
+  svg {
     width: 20px;
     height: 20px;
   }

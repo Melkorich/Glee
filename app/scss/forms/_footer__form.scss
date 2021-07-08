@@ -54,7 +54,6 @@
     color: $whiteff;
     border: transparent;
     outline: transparent;
-    @extend %btn;
 
     @include maxw($lg) {
       font-size: 18px;

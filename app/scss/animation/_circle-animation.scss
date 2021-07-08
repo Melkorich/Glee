@@ -1,0 +1,30 @@
+.circle-animation {
+  transition: background-color 1s, opacity 0.3s;
+
+  svg {
+    transition: fill 0.5s;
+  }
+
+  &:focus {
+    background-color: $greyc8;
+
+    svg {
+      fill: $orange-bg;
+    }
+  }
+
+  &:hover {
+    background-color: $greyc8;
+
+    svg {
+      fill: $whiteff;
+    }
+  }
+
+  &:active {
+
+    svg{
+      fill: $orange-bg;
+    }
+  }
+}

@@ -11,4 +11,26 @@
   overflow: hidden; 
 } 
 
+@mixin maxw($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
 
+@mixin minw($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+  
+@mixin maxh($width) {
+  @media (max-height: $width) {
+    @content;
+  }
+}
+  
+@mixin minh($width) {
+  @media (min-height: $width) {
+    @content;
+  }
+} 

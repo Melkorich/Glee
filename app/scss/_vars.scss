@@ -12,73 +12,19 @@ $blue4d: #243f4d;
 $blue72: #436372;
 $blue44: #1f2044;
 
-$balck19: #191919;
+$black19: #191919;
 $black1a: #1a1a1a;
 
 
 $red41: #414141;
 $red3e: #523e3e;
 
-
-%btn {
-  transition: background-color 1s, color 0.5s, opacity 0.1s;
-
-  &:focus {
-    background-color: $blue72;
-    color: $orange-bg;
-    svg {
-      fill: $whiteff;
-      transition: fill 1s;
-    }
-  }
-
-  &:hover {
-    background-color: $blue4d;
-    color: $orange-bg;
-    svg {
-      fill: $orange-bg;
-      transition: fill 1s;
-    }
-  }
- 
-  &:active {
-    opacity: 0.6;
-  } 
-}
   
-
-
-%circle-animation {
-  transition: background-color 1s, opacity 0.3s;
-
-  svg {
-    transition: fill 0.5s;
-  }
-
-  &:focus {
-    background-color: $greyc8;
-    svg {
-      fill: $orange-bg;
-    }
-  }
-
-  &:hover {
-    background-color: $greyc8;
-    svg {
-      fill: $whiteff;
-    }
-  }
-
-  &:active {
-    svg{
-      fill: $orange-bg;
-    }
-  }
-}
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }

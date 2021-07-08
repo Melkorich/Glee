@@ -18,6 +18,8 @@
 /*animation*/ 
 @import "animation/animation";
 @import "animation/animation-cards";
+@import "animation/circle-animation";
+
 
 /*home page*/
 @import "index/main-slider";
@@ -29,7 +31,7 @@
 
 /*cards*/
 @import "cards/product__card";
-@import "cards/product__lamp";
+@import "cards/lamp-card";
 @import "cards/insights__card";
 @import "cards/design__card";
 

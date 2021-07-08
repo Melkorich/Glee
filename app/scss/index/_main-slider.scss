@@ -3,7 +3,7 @@
   padding-top: 150px;
 
   @include maxw($xl) {
-    padding-top: 84px;
+    padding-top: 69px;
   }
 
   @include maxw($md) {
@@ -223,20 +223,20 @@
       opacity: 1;
       background-color: $whiteff;
       transition: 0.6s;
-    }
-  
-    button:focus {
-      background-color: $whiteff;
-    }
 
-    button:hover {
-      background-color: $blue4d;
-      color: $whiteff;
-    }
-    
-    button:active {
-      background-color: rgb(234, 161, 96);
-      color: $black1a;
+      &:focus {
+        background-color: $whiteff;
+      }
+
+      &:hover {
+        background-color: $blue4d;
+        color: $whiteff;
+      }
+
+      &:active {
+        background-color: rgb(234, 161, 96);
+        color: $black1a;
+      }
     }
   }
 
