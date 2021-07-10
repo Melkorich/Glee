@@ -4,17 +4,17 @@ $(document).ready(function(){
     $('body').toggleClass('lock');
   });
 });
-
+ 
 
 $(function(){
 
-  $(window).scroll(function(){
-    if ($(document).scrollTop() > 50) {
-      $(".header").addClass("header--scroll");
-    } else {
-      $(".header").removeClass("header--scroll");
-    }
-  });
+  // $(window).scroll(function(){
+  //   if ($(document).scrollTop() > 50) {
+  //     $(".header").addClass("header--scroll");
+  //   } else {
+  //     $(".header").removeClass("header--scroll");
+  //   }
+  // });
 
   $('.menu__btn').on('click', function(){
     $('.menu').toggleClass('menu--active');

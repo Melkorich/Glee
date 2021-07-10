@@ -77,3 +77,35 @@ body {
 .arrow-right--dark {
   fill: $blue4d;
 } 
+
+.breadcrumbs {
+  display: inline-flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 22px;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba(34, 41, 51, 0.6);
+
+    &:last-child {
+      color: #e28d42;
+    }
+  
+    &:not(:last-child)::after {
+      position: absolute;
+      right: 11px;
+      width: 2px;
+      height: 13px;
+      content: '/';
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}

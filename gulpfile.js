@@ -25,7 +25,7 @@ function lintCss(){
 
 
 function htmlInclude() {
-  return src(['app/html/index.html'])
+  return src(['app/html/*.html'])
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
