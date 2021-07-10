@@ -4,8 +4,8 @@ $(document).ready(function(){
     $('body').toggleClass('lock');
   });
 });
-
-
+ 
+  
 $(function(){
 
   $(window).scroll(function(){
