@@ -6,28 +6,33 @@
 @import 'global';
 @import 'media';
 
-
-/*general*/
+/* general */
 @import "components/header";
 @import "components/footer";
-@import "components/video";
 @import "components/insights";
-@import "components/animation";
-@import "components/buttons";
-@import "components/animation-cards";
 @import "components/filter";
+@import "buttons/buttons";
+@import "forms/footer__form"; 
 
-/*home page*/
+/* animation */ 
+@import "animation/animation";
+@import "animation/animation-cards";
+@import "animation/circle-animation";
 
+/* home page */
 @import "index/main-slider";
 @import "index/benefits";
-@import "index/products";
+@import "index/products-week";
 @import "index/design";
 @import "index/partners";
+@import "index/video";
 
-
-
-/*about page*/
+/* cards */
+@import "cards/product__card";
+@import "cards/lamp-card";
+@import "cards/insights__card";
+@import "cards/design__card";
 
  
 
+/* about page */

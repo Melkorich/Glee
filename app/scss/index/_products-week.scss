@@ -1,0 +1,72 @@
+.products-week {
+  padding-top: 72px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include maxw($sm) {
+      padding: 0 15px;
+      font-size: 30px;
+    }
+  }
+
+  &__filters {
+    @include maxw($sm) {
+      margin-bottom: 50px;
+    }
+  }
+ 
+
+  .mixitup-control-active {
+    color: $red3e;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    margin-right: 30px;
+    margin-bottom: 40px;
+
+    @include maxw($sm) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__lamps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    padding: 150px 0 90px;
+
+    @include maxw($xl) {
+      grid-template-columns: 1fr;
+      grid-gap: 50px 0;
+      width: 100%;
+      min-width: 100%;
+    }
+  
+    @include maxw($sm) {
+      padding-top: 60px;
+    }
+  }
+}
+ 
+
+.title {
+  @include maxw($md) {
+    font-size: 30px;
+  }
+
+  @include maxw($sm) {
+    font-size: 23px;
+  }
+}

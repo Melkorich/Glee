@@ -8,6 +8,14 @@ $(document).ready(function(){
 
 $(function(){
 
+  $(window).scroll(function(){
+    if ($(document).scrollTop() > 50) {
+      $(".header").addClass("header--scroll");
+    } else {
+      $(".header").removeClass("header--scroll");
+    }
+  });
+
   $('.menu__btn').on('click', function(){
     $('.menu').toggleClass('menu--active');
   });
@@ -21,37 +29,6 @@ $(function(){
   $('.main-slider__inner').slick({
     arrows: false,
     dots: true,
-  });
-
-  $('.partners-slider').slick({
-    arrows: false,
-    donts:false,
-    autoplay: true,
-    centerMode: false,
-    slidesToShow: 4,
-    
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          arrows: false,
-          autoplay: true,
-          centerMode: false,
-          centerPadding: '40px',
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          autoplay: true,
-          centerMode: false,
-          centerPadding: '40px',
-          slidesToShow: 2,
-        }
-      }
-    ]
   });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');

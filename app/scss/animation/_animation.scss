@@ -1,0 +1,78 @@
+.animation {
+  background-color: transparent;
+  outline: transparent;
+  transition: color 0.3s, opacity 0.1s;
+
+  &:focus {
+    color: #54c2f5;
+  }
+  
+  &:hover {
+    color: #fc8015;
+  } 
+  
+  &:active {
+    color: $black19;
+    opacity: 0.5;
+  }
+}
+
+.amination-nav {
+  transition: background-color 1s;
+
+  svg {
+    transition: fill 0.6s;
+  }
+  
+  &:focus {
+    background-color: $greyc8;
+
+    svg {
+      fill: $whiteff;
+    }
+  }
+
+  &:hover {
+    background-color: rgb(226, 141, 66);
+  }
+
+  &:active {
+    svg {
+      fill: $whiteff;
+    }
+  }
+}
+
+.main-link {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    display: block;
+    width: 30px;
+    height: 100%;
+    content: '';
+    background-color: rgba(187, 184, 184, 0.5);
+    transition: transform 0.5s ease-in-out;
+    transform: skewX(-45deg) translateX(-15px);
+  }
+  
+  &:hover {
+    color: $orange-bg;
+    background-color: $blue4d;
+
+    &::before {
+      transform: skewX(-45deg) translateX(300px);
+    }
+  }
+}
+
+@keyframes main-link {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
+}

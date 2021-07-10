@@ -1,6 +1,15 @@
 
 .main-slider {
-  padding-top: 154px;
+  padding-top: 150px;
+
+  @include maxw($xl) {
+    padding-top: 69px;
+  }
+
+  @include maxw($md) {
+    justify-content: center;
+    text-align: center;
+  }
   
   &__inner {
     background-color: $orange-bg;
@@ -12,133 +21,25 @@
   }
 
   &__wrapper {
-    @include flexible ();
     position: relative;
     height: 820px;
+    @include flexible ();
 
     &::before {
-      content:'';
       position: absolute;
-      width: 634px;
-      height: 634px;
       top: 95px;
       right: -90px;
+      width: 634px;
+      height: 634px;
+      content: '';
+      background: linear-gradient(90deg, (transparent) 0%, rgba(255, 255, 255, 1) 100%);
       border-radius: 50%;
-      background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,1) 100%);
-    }
-  }
-
-  &__content {
-    max-width: 470px;
-    min-height: 400px;
-    width: 100%;
-    overflow: hidden;
-    @include line-climp(2);
-  }
-
-  &__title {
-    max-width: 470px;
-    font-size: 72px;
-    font-weight: 500;
-    line-height: 1;
-    color: $blue4d;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    @include line-climp(3);
-  }
-
-  &__text {
-    color: $blue72;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 37px;
-    max-width: 370px;
-    @include line-climp(4);
-    letter-spacing: 0.2px;
-  }
-
-  &__imgbox {
-    max-width: 640px;
-    height: 580px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 6;
-  }
-
-  .slick-dots {
-    position: absolute;
-    width: 30px;
-    height: 29px;
-    bottom: 30px;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-
-    li {
-      padding: 0 5px;
-
-      button {
-        background-color: $whiteff;
-        opacity: 0.3;
-        border-radius: 50%;
-        border: transparent;
-        padding: 10px 12px;
-        font-size: 11px;
-        font-weight: 500;
-        line-height: 1;
-        transition: background-color 0.6s, border 0.6s;
-      }
     }
 
-    .slick-active button{
-      opacity: 1;
-      background-color: $whiteff;
-      transition: 0.6s;
-    }
-  
-    button:focus {
-      background-color: $whiteff;
-    }
-
-    button:hover {
-      background-color: $blue4d;
-      color: $whiteff;
-    }
-    
-    button:active {
-      background-color: rgb(234, 161, 96);
-      color: $black1a;
-    }
-  }
-}
-
-/*media*/
-
-
-.main-slider {
-  @include maxw($md) {
-    text-align: center;
-    justify-content: center;
-  }
-
-  &__content {
-    @include maxw($xxl) {
-      width: 411px;
-    }
-  }
-
-  &__wrapper {
     @include maxw($xxl) {
       height: 790px;
       padding-right: 65px;
+
       &::before {
         right: 0;
       }
@@ -147,16 +48,18 @@
     @include maxw($xl) {
       height: 730px;
       padding-right: 0;
+
       &::before {
+        top: 90px;
         width: 560px;
         height: 560px;
-        top: 90px;
-        background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,0.7) 100%);
+        background: linear-gradient(90deg, (transparent) 0%, rgba(255, 255, 255, 0.7) 100%);
       }
     }
 
     @include maxw($lg) {
       height: 580px;
+
       &::before {
         display: none;
       }
@@ -165,57 +68,69 @@
     @include maxw($md) {
       flex-direction: column;
       align-items: center;
-      padding: 50px 10px;
-      height: 460px;
-    }
-
-    @include maxw($xs) {
-      padding-top: 35px;
-    }
-  }
-
-  &__imgbox {
-    @include maxw($xxl) {
-      max-width: 610px;
-    }
-
-    @include maxw($lg) {
-      background-image: none !important;
-      max-width: 470px;
-      height: 400px;
-      justify-content: flex-end;
+      justify-content: center;
+      padding: 0;
     }
   }
 
   &__content {
+    width: 100%;
+    max-width: 470px;
+    min-height: 400px;
+    overflow: hidden;
+    @include line-climp(2);
+
+    @include maxw($xxl) {
+      width: 411px;
+    }
+
+    @include maxw($md) {
+      width: 100%;
+      min-height: 230px;
+      padding: 10px 0;
+      margin: 0 auto;
+    }
+
     @include maxw($sm) {
-      max-width: 320px;
-      padding: 0 30px;
+      min-height: 250px;
     }
   }
 
   &__title {
+    max-width: 470px;
+    margin-bottom: 28px;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1;
+    color: $blue4d;
+    text-transform: uppercase;
+    @include line-climp(3);
+
     @include maxw($xl) {
       font-size: 60px;
     }
 
     @include maxw($lg) {
-      font-size: 50px;
+      font-size: 40px;
     }
 
     @include maxw($md) {
       display: block;
       width: 100%;
-      margin-bottom: 25px;
-    }
-
-    @include maxw($sm) {
-      font-size: 45px;
       max-width: 100%;
+      margin-bottom: 20px;
     }
   }
 
   &__text {
+    max-width: 370px;
+    margin-bottom: 37px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $blue72;
+    letter-spacing: 0.2px;
+    @include line-climp(4);
+
     @include maxw($xl) {
       max-width: 360px;
     }
@@ -223,23 +138,107 @@
     @include maxw($md) {
       display: inline-block;
       width: 100%;
-      margin: 0px;
-      margin-bottom: 25px;
       padding: 0;
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 630px;
+    height: 490px;
+    overflow: hidden;
+
+    @include maxw($xxl) {
+      max-width: 610px;
+    }
+
+    @include maxw($md) {
+      max-width: 450px;
+      max-height: 250px;
+      margin: 0;
+    }
+
+    @include maxw($sm) {
+      max-width: 230px;
+      max-height: 170px;
     }
   }
 
   &__img {
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
     @include maxw($xl) {
       width: 90%;
       height: 100%;
     }
 
     @include maxw($md) {
-      display: none !important;
+      width: 300px;
+      height: 200px;
+    }
+
+    @include maxw($sm) {
+      width: 230px;
+      height: 170px;
     }
   }
-  
+
+  .slick-dots {
+    position: absolute;
+    right: 50%;
+    bottom: 30px;
+    display: flex;
+    width: 30px;
+    height: 29px;
+    transform: translate(-50%, -50%);
+
+    @include maxw($md) {
+      bottom: 15px;
+    }
+
+    li {
+      padding: 0 5px;
+
+      button {
+        padding: 10px 12px;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1;
+        background-color: $whiteff;
+        border: transparent;
+        border-radius: 50%;
+        opacity: 0.3;
+        transition: background-color 0.6s, border 0.6s;
+      }
+    }
+
+    .slick-active button {
+      background-color: $whiteff;
+      opacity: 1;
+      transition: 0.6s;
+
+      &:focus {
+        background-color: $whiteff;
+      }
+
+      &:hover {
+        color: $whiteff;
+        background-color: $blue4d;
+      }
+
+      &:active {
+        color: $black1a;
+        background-color: rgb(234, 161, 96);
+      }
+    }
+  }
+
   &__link {
     @include maxw($md) {
      margin: 0 auto;

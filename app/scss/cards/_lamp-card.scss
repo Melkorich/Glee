@@ -1,0 +1,148 @@
+.lamp-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 870px;
+  min-height: 390px;
+  padding: 5px 140px 5px 5px;
+  background-color: #feefe2;
+
+  @include maxw($xxl) {
+    padding: 5px;
+  }
+
+  @include maxw($xl) {
+    justify-content: center;
+    max-width: 870px;
+    padding: 5px 10px;
+    margin: 0 auto;
+  }
+
+  @include maxw($sm) {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ''; 
+    background-image: linear-gradient(to bottom, $orange-bg 25%, $whiteff 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &__img-box {
+    flex-basis: 250px;
+    margin-right: 70px;
+
+    @include maxw($md) {
+      flex-basis: 185px;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__img-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &:hover img {
+      transform: translateX(-20px);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -30px;
+    bottom: -105px;
+    min-width: 230px;
+    height: 400px;
+    transition: transform 1s;
+
+    @include maxw($md) {
+      position: relative;
+      top: 0;
+      width: 70%;
+      min-width: 100px;
+      height: 60%;
+    }
+
+    @include maxw($sm) {
+      width: 30%;
+      height: 30%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    text-align: left;
+
+    @include maxw($md) {
+      align-items: center;
+      width: 60%;
+      padding: 0 10px;
+    }
+
+    @include maxw($sm) {
+      width: 100%;
+      max-width: 260px;
+    }
+  }
+
+  &__title {
+    max-width: 260px;
+    margin-bottom: 15px;
+    font-family: 'DMSans', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $blue4d;
+    @include line-climp(2);
+  }
+
+  &__text {
+    max-width: 300px; 
+    margin-bottom: 30px;
+    font-family: "Rubik", sans-serif;
+    line-height: 1.8;
+    color: $blue4d;
+    @include line-climp(4);
+
+    @include maxw($sm) {
+      max-width: 250px; 
+    }
+  }
+ 
+  &__link {
+    max-width: 180px;
+    padding: 21px 19px;
+    color: $blue72;
+    background-color: transparent;
+    border: 1px solid #436372;
+    border-radius: 5px;
+
+    svg {
+      width: 22px;
+      height: 9px;
+    }
+  }
+}

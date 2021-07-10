@@ -1,0 +1,43 @@
+
+.main-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  padding: 21px 27px;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: $whiteff;
+  background-color: #a3bbc8;
+  border: transparent;
+  outline: transparent;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 22px;
+    height: 9px;
+    transform: translateY(-50%);
+  }
+}
+
+.btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 51px;
+  background-color: $whitf4;
+  border: transparent;
+  border-radius: 50%;
+  outline: transparent;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

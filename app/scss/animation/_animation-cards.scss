@@ -1,0 +1,13 @@
+
+.design-card__link {
+  transition: background-color 1s, box-shadow 1s;
+
+  &:hover {
+    background-color: #f7e3d1;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.5);
+
+    .design-card__title {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,30 +1,48 @@
 .footer {
-  color: $grey7b;
   font-size: 14px;
   line-height: 1.7;
+  color: $grey7b;
+
+  @include maxw($lg) {
+    font-size: 18px;
+  }
 
   &__top {
-    padding: 40px 0 70px;
-    border-bottom: 1px solid $greyc8;
     display: flex;
     min-height: 325px;
+    padding: 40px 0 70px;
+    border-bottom: 1px solid $greyc8;
+
+    @include maxw($lg) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
  
   &__contacts {
     width: 270px;
     margin-right: 30px;
+
+    @include maxw($lg) {
+      width: 200px;
+    }
+
+    @include maxw($md) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__logo {
-    margin-bottom: 25px;
     display: block;
+    margin-bottom: 25px;
   }
 
   &__address {
-    max-width: 200px;
     width: 100%;
-    line-height: 1.7;
+    max-width: 200px;
     font-style: normal;
+    line-height: 1.7;
   }
 
   &__link {
@@ -38,22 +56,38 @@
   }
 
   &__items {
-    width: 270px;
-    margin-right: 30px;
-    align-items:flex-end;
+    align-items: flex-end;
     padding-top: 15px;
     @include line-climp(2);
+
+    @include maxw($lg) {
+      width: 170px;
+    }
+
+    @include maxw($sm) {
+      margin-bottom: 15px;
+    }
+  }
+  
+  &__services {
+    width: 270px;
+    padding-top: 15px;
+    margin-right: 30px;
+
+    @include maxw($xl) {
+      width: 220px;
+      margin-right: 15px;
+    }
   }
 
   &__title {
+    min-width: 270px;
     font-family: 'DMSans', sans-serif;
+    font-size: 16px;
     font-weight: 700;
     color: $blue44;
     text-transform: uppercase;
-    margin-bottom: 18px;
-    font-size: 16px;
-    min-width: 270px;
-    @include line-climp(1);
+    @include line-climp(2);
   }
 
   &__item:not(:last-child) {
@@ -65,56 +99,33 @@
   }
  
   &__newsletter {
-    max-width: 270px;
     width: 100%;
+    max-width: 270px;
     padding-top: 15px;
     @include line-climp(2);
+
+    @include maxw($lg) {
+      max-width: 100%;
+      padding-top: 30px;
+    }
   }
 
   &__text {
-    line-height: 1.7;
     margin-bottom: 32px;
+    line-height: 1.7;
     @include line-climp(4);
   }
 
-  &__form {
-    font-family: 'DMSans', sans-serif;
-    width: 270px;
-  }
- 
-  &__input {
-    max-width: 166px;
-    width: 100%;
-    height: 38px;
-    background-color: rgba(252, 215, 182, 0.2 );
-    padding: 14px 16px;
-    border: transparent;
-    outline: transparent;
-    margin-right: -2px;
-
-    &::placeholder {
-      font-size: 12px;
-      color: #234969;
-      opacity: 1;
-    }
-  } 
-
-  &__btn {
-    min-width: 100px;
-    background-color: $greyc8;
-    font-size: 14px;
-    padding: 7px 19px 7px 16px;
-    color: $whiteff;
-    border: transparent;
-    outline: transparent;
-    @extend %btn;
-  }
-
   &__bottom {
-    @include flexible ();
-    line-height: 2;
-    padding: 25px 0;
     flex-wrap: wrap;
+    padding: 25px 0;
+    line-height: 2;
+    @include flexible ();
+
+    @include maxw($sm) {
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__menu {
@@ -136,97 +147,17 @@
   }
 }
 
-
-/* медиа */
-
-.footer {
-
-  @include maxw($lg) {
-    font-size: 18px;
-  }
-
-  &__top {
-    @include maxw($lg) {
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-
-  &__contacts {
-    @include maxw($lg) {
-      width: 200px;
-    }
-
-    @include maxw($md) {
-      width: 100%;
-      margin-right: 0;
-    }
-  }
-
-  &__items {
-    @include maxw($lg) {
-      width: 170px;
-    }
-
-    @include maxw($xs) {
-      margin-bottom: 15px;
-    }
-  }
-
-  &__newsletter {
-    @include maxw($lg) {
-      max-width: 100%;
-      padding-top: 30px;
-    }
-  }
-
-  &__form {
-    @include maxw($lg) {
-      width: 300px;
-    }
-
-    @include maxw($sm) {
-      flex-wrap: wrap;
-      margin: 0;
-      width: 100%;
-    }
-  }
-
-  &__input {
-    @include maxw($lg) {
-      height: 44px;
-      padding: 5px 10px;
-    }
-
-    @include maxw($sm) {
-      max-width: 100%;
-      display: block;
-      margin-bottom: 15px;
-      height: 45px;
-    }
-
-    &::placeholder {
-      @include maxw($lg) {
-        font-size: 18px;
-      }
-    }
-  }
-
-  &__bottom {
-    @include maxw($sm) {
-     justify-content: center;
-     text-align: center;
-    }
-  }
-
-  &__btn {
-    @include maxw($lg) {
-      font-size: 18px;
-    }
-
-    @include maxw($sm) {
-      display: block;
-      width: 100%;
-    }
+.adaptive-link {
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    bottom: 0;
+    left: -6px;
+    width: 55px;
+    height: 30px;
+    content: '';
   }
 }

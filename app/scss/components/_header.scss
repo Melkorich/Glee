@@ -1,256 +1,151 @@
 .header {
   position: fixed;
-  width: 100%;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 50;
+  width: 100%;
+  transition: background-color 0.5s;
 
-  &:before {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $whiteff;
-    z-index: 2;
+  &--scroll {
+    background-color: #d1d1d1;
   }
 }
 
 .header__inner {
-  display: flex;
-  padding: 50px 0;
-  align-items: center;
   position: relative;
   z-index: 9;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+
+  @include maxw($xl) {
+    justify-content: space-between;
+    padding: 15px 0;
+  }
 }
 
 .menu {
   display: flex;
-  margin: 0 auto;
   padding-left: 150px;
+  margin: 0 auto;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+  
 
   &__link {
-    color: $blue72;
-    font-size: 15px;
+    position: relative;
     padding: 5px 5px;
-    font-family: 'Rubik';
+    font-size: 15px;
     font-weight: 500;
-    position: relative;
+    color: $blue72;
+
+    @include maxw($xl) {
+      display: block;
+      padding: 5px 0;
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    @include maxh($sm) {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 1;
+    }
   } 
-  
-  &__btn {
-    display: none;
-  }
-}
 
-
-.user-nav {
-  @include flexible ();
- 
-  &__search {
-    margin-right: 20px;
-    @extend %circle-animation;
-
-    svg {
-      max-width: 16px;
-      max-height: 16px;
-    }
-  }
-
-  &__heart,
-  &__basket {
-    background-color: $orange-bg;
-    position: relative;
-    outline: transparent;
-
-    & svg {
-      width: 18px;
-      height: 17px;
-    }
-  }
-
-  &__heart {
-    padding: 20px 30px 12px 40px;
-    border-radius: 30px 0 0 30px;
-
-    &::after {
-      content:'';
-      position: absolute;
-      background-image: url('../../images/icons/line-nav.svg');
-      background-repeat: no-repeat;
-      width: 1px;
-      height: 32px;
-      right: 0;
-      top: 10px;
-    }
-  }
-  
-  &__basket {
-    padding: 20px 40px 12px 27px;
-    border-radius: 0 30px 30px 0;
-    margin-right: 18px;
-  }
-
-  &__wrap {
-    position: relative;
-  }
-
-  &__num {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    padding: 5px 4px 4px 5px;
-    background-color: $whiteff;
-    height: 16px;
-    border-radius: 35px;
-    font-size: 10px;
-    line-height: 1;
-  }
-
-  &__navigation {
-    @extend %circle-animation;
-  }
-}
-
-/* media*/
-
-.header__inner {
-  @include maxw($xl) {
-    justify-content: space-between;
-  }
-  @include maxw($sm) {
-    position: relative;
-    padding: 30px 0;
-  }
-}
-
-.menu {
   @include maxw($xxl) {
     padding-left: 0;
   }
 
   @include maxw($xl) {
-   position: absolute;
-   width: 100%;
-   top: 150px;
-   flex-direction: column;
-   align-items: flex-start;
-   text-align: center;
-   z-index: 9;
-   transform: translateX(-200%);
-   transition: transform 0.4s;
-   overflow: auto;
-   height: 100vh;
-   background-color: $whiteff;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    flex-direction: column;
+    width: 100%;
+    height: 85vh;
+    overflow: auto;
+    text-align: center;
+    background-color: #d1d1d1;
+    transition: transform 0.4s;
+    transform: translateX(-200%);
 
-   &.menu--active {
+    &.menu--active {
       transform: translateX(0%);
-      transition: transform 0.4s;
     }
 
     &__btn.active {
       &::before {
-        transform: rotate(45deg);
         top: 14px;
-        transition: transform 0.5s;
+        transform: rotate(45deg);
       }
 
       &::after {
-        transform: rotate(-45deg);
         bottom: 14px;
-        transition: transform 0.5s;
+        transform: rotate(-45deg);
       }
 
       span {
         transform: scale(0);
-        transition: transform 0.5s;
       }
     }
   }
 
   @include maxw($sm) {
-    top: 200px;
+    top: 170px;
   }
 
-  @include maxh($xs) {
-    top: 190px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    height: 150px;
+  &__item {
+    @include maxw($xl) {
+      width: 100%;
+      padding: 0 15px 20px 15px;
+    }
   }
 
   &__item:not(:last-child) {
+    margin-right: 30px;
+
     @include maxw($xl) {
       margin-right: 0;
     }
   }
  
-  &__item {
-    @include maxw($xl) {
-      padding: 20px 15px;
-      width: 100%;
-    }
-
-    @include maxh($xs) {
-     padding: 20px 15px;
-     width: 25%;
-    }
-  }
-
-  &__link {
-    @include maxw($xl) {
-      font-size: 24px;
-      line-height: 1.6;
-      display: block;
-      padding: 5px 0;
-    }
-
-    @include maxh($xs) {
-      font-size: 20px;
-      line-height: 1;
-      display: inline-block;
-    }
-  }
 
   &__btn {
     position: relative;
     z-index: 9;
+    display: none;
+    
     @include maxw($xl) {
-      width: 45px;
-      height: 32px;
       position: relative;
-      border: transparent;
-      background-color: transparent;
-      order: 1;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      order: 1;
+      width: 42px;
+      height: 30px;
       padding: 0;
       margin-left: auto;
+      background-color: transparent;
+      border: transparent;
 
       span {
         position: absolute;
+        left: 0;
         width: 100%;
         height: 4px;
-        left: 0;
         background-color: $blue4d;
         transition: transform 0.5s;
       }
 
       &::after,
       &::before {
-        content:'';
         position: absolute;
+        left: 0;
         width: 100%;
         height: 4px;
-        left: 0;
+        content: '';
         background-color: $blue4d;
         transition: transform 0.5s;
       }
@@ -265,74 +160,99 @@
     }
   }
 }
+ 
 
 .user-nav {
+  @include flexible ();
 
   @include maxw($xl) {
-    margin-left: auto;
-  }
-
-  @include maxw($sm) {
     position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    right: 0;
+    left: 0;
     z-index: 2;
-    transform: translateX(200%);
-    transition: transform 0.4s;
-    background-color: $whiteff;
-    padding-top: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 225px;
     padding-bottom: 60px;
+    background-color: #d1d1d1;
+    transition: transform 0.4s;
+    transform: translateX(200%);
     
     &.user-nav--active {
       transition: transform 0.4s;
       transform: translateX(0%);
     }
   }
-
-
+  
   &__search {
-    @include maxw($sm) {
-      margin-right: 0;
+    svg {
+      max-width: 16px;
+      max-height: 16px;
     }
   }
 
-  &__heart,
-  &__basket {
-    @include maxw($md) {
-      display: none;
-    }
-
-    @include maxw($sm) {
-      display: flex;
-      background-color: $whitf4;
-      justify-content: center;
-      align-items: center;
-      margin-right: 0;
-      width: 16px;
-      height: 16px;
-    }
+  &__num {
+    position: absolute;
+    top: -7px;
+    height: 16px;
+    padding: 4px;
+    font-size: 10px;
+    line-height: 1;
+    background-color: $whiteff;
+    border-radius: 35px;
   }
 
-  &__heart {
-    @include maxw($sm) {
-      border-radius: 50%;
-      margin-right: 0;
-      padding: 25px;
-    }
-  }
+  &__item {
+    align-items: center;
+    width: 180px;
+    height: 51px;
+    padding: 20px 0 14px;
+    margin: 0 15px;
+    text-align: center;
+    cursor: pointer;
+    background-color: $orange-bg;
+    border-radius: 30px;
+    
+    .user-nav__item--heart,
+    .user-nav__item--basket {
+      position: relative;
+      outline: transparent;
 
-  &__basket {
-    @include maxw($sm) {
-      border-radius: 50%;
-      padding: 25px;
-      margin-right: 0;
+      svg {
+        width: 18px;
+        height: 17px;
+      }
     }
-  }
 
-  &__wrap {
     @include maxw($sm) {
-      height: 18px;
+      margin: 0 5px;
+    }
+
+    .user-nav__item--heart {
+      padding-right: 60px;
+
+      &::after {
+        position: absolute;
+        top: -12px;
+        right: 25px;
+        width: 1px;
+        height: 32px;
+        content: '';
+        background-image: url('../../images/icons/line-nav.svg');
+        background-repeat: no-repeat;
+      }
+
+      .user-nav__num {
+        right: 55px;
+      }
+    }
+
+    .user-nav__item--basket {
+      .user-nav__num {
+        right: -8px;
+      }
     }
   }
 }
@@ -342,6 +262,4 @@ body.lock {
     overflow: hidden;
   }
 }
-
-
-
+ 
