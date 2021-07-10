@@ -1,9 +1,9 @@
 .header {
   position: fixed;
-  width: 100%;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 50;
+  width: 100%;
   transition: background-color 0.5s;
 
   &--scroll {
@@ -12,11 +12,11 @@
 }
 
 .header__inner {
-  display: flex;
-  padding: 50px 0;
-  align-items: center;
   position: relative;
   z-index: 9;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
 
   @include maxw($xl) {
     justify-content: space-between;
@@ -26,70 +26,64 @@
 
 .menu {
   display: flex;
-  margin: 0 auto;
   padding-left: 150px;
+  margin: 0 auto;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+  
 
   &__link {
-    color: $blue72;
-    font-size: 15px;
-    padding: 5px 5px;
-    font-weight: 500;
     position: relative;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $blue72;
 
     @include maxw($xl) {
-      font-size: 24px;
-      line-height: 1.6;
       display: block;
       padding: 5px 0;
+      font-size: 24px;
+      line-height: 1.6;
     }
 
     @include maxh($sm) {
+      display: inline-block;
       font-size: 20px;
       line-height: 1;
-      display: inline-block;
     }
   } 
-    
-  &__btn {
-    display: none;
-  }
 
   @include maxw($xxl) {
     padding-left: 0;
   }
 
   @include maxw($xl) {
-   position: absolute;
-   width: 100%;
-   left: 0;
-   right: 0;
-   top: 200px;
-   flex-direction: column;
-   text-align: center;
-   z-index: 3;
-   transform: translateX(-200%);
-   transition: transform 0.4s;
-   overflow: auto;
-   height: 85vh;
-   background-color: #d1d1d1;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    flex-direction: column;
+    width: 100%;
+    height: 85vh;
+    overflow: auto;
+    text-align: center;
+    background-color: #d1d1d1;
+    transition: transform 0.4s;
+    transform: translateX(-200%);
 
-   &.menu--active {
+    &.menu--active {
       transform: translateX(0%);
     }
 
     &__btn.active {
       &::before {
-        transform: rotate(45deg);
         top: 14px;
+        transform: rotate(45deg);
       }
 
       &::after {
-        transform: rotate(-45deg);
         bottom: 14px;
+        transform: rotate(-45deg);
       }
 
       span {
@@ -102,52 +96,56 @@
     top: 170px;
   }
 
+  &__item {
+    @include maxw($xl) {
+      width: 100%;
+      padding: 0 15px 20px 15px;
+    }
+  }
+
   &__item:not(:last-child) {
+    margin-right: 30px;
+
     @include maxw($xl) {
       margin-right: 0;
     }
   }
  
-  &__item {
-    @include maxw($xl) {
-      padding: 0 15px 20px 15px;
-      width: 100%;
-    }
-  }
 
   &__btn {
     position: relative;
     z-index: 9;
+    display: none;
     
     @include maxw($xl) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: 1;
       width: 42px;
       height: 30px;
-      position: relative;
-      border: transparent;
-      background-color: transparent;
-      order: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       padding: 0;
       margin-left: auto;
+      background-color: transparent;
+      border: transparent;
 
       span {
         position: absolute;
+        left: 0;
         width: 100%;
         height: 4px;
-        left: 0;
         background-color: $blue4d;
         transition: transform 0.5s;
       }
 
       &::after,
       &::before {
-        content:'';
         position: absolute;
+        left: 0;
         width: 100%;
         height: 4px;
-        left: 0;
+        content: '';
         background-color: $blue4d;
         transition: transform 0.5s;
       }
@@ -169,18 +167,18 @@
 
   @include maxw($xl) {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: 2;
-    transform: translateX(200%);
-    transition: transform 0.4s;
-    background-color: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding-top: 225px;
     padding-bottom: 60px;
+    background-color: #d1d1d1;
+    transition: transform 0.4s;
+    transform: translateX(200%);
     
     &.user-nav--active {
       transition: transform 0.4s;
@@ -195,16 +193,27 @@
     }
   }
 
+  &__num {
+    position: absolute;
+    top: -7px;
+    height: 16px;
+    padding: 4px;
+    font-size: 10px;
+    line-height: 1;
+    background-color: $whiteff;
+    border-radius: 35px;
+  }
+
   &__item {
-    margin: 0 15px;
-    border-radius: 30px;
-    background-color: $orange-bg;
     align-items: center;
-    text-align: center;
     width: 180px;
     height: 51px;
     padding: 20px 0 14px;
+    margin: 0 15px;
+    text-align: center;
     cursor: pointer;
+    background-color: $orange-bg;
+    border-radius: 30px;
     
     .user-nav__item--heart,
     .user-nav__item--basket {
@@ -218,21 +227,21 @@
     }
 
     @include maxw($sm) {
-     margin: 0 5px;
+      margin: 0 5px;
     }
 
     .user-nav__item--heart {
       padding-right: 60px;
 
       &::after {
-        content:'';
         position: absolute;
-        background-image: url('../../images/icons/line-nav.svg');
-        background-repeat: no-repeat;
+        top: -12px;
+        right: 25px;
         width: 1px;
         height: 32px;
-        right: 25px;
-        top: -12px;
+        content: '';
+        background-image: url('../../images/icons/line-nav.svg');
+        background-repeat: no-repeat;
       }
 
       .user-nav__num {
@@ -246,17 +255,6 @@
       }
     }
   }
-
-  &__num {
-    position: absolute;
-    top: -7px;
-    padding: 4px;
-    background-color: $whiteff;
-    height: 16px;
-    border-radius: 35px;
-    font-size: 10px;
-    line-height: 1;
-  }
 }
 
 body.lock {
@@ -264,7 +262,4 @@ body.lock {
     overflow: hidden;
   }
 }
-
-
-
  

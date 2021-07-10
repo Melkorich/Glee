@@ -1,6 +1,6 @@
 .footer-form {
-  font-family: 'DMSans', sans-serif;
   width: 270px;
+  font-family: 'DMSans', sans-serif;
 
   @include maxw($lg) {
     width: 300px;
@@ -8,19 +8,19 @@
 
   @include maxw($sm) {
     flex-wrap: wrap;
-    margin: 0;
     width: 100%;
+    margin: 0;
   }
 
   &__input {
-    max-width: 166px;
     width: 100%;
+    max-width: 166px;
     height: 38px;
-    background-color: rgba(252, 215, 182, 0.2 );
-    padding: 14px 16px;
+    padding: 14px 16px; 
+    margin-right: -2px;
+    background-color: rgba(252, 215, 182, 0.2);
     border: transparent;
     outline: transparent;
-    margin-right: -2px;
 
     @include maxw($lg) {
       height: 44px;
@@ -28,12 +28,11 @@
     }
 
     @include maxw($sm) {
-      max-width: 100%;
       display: block;
-      margin-bottom: 15px;
+      max-width: 100%;
       height: 45px;
+      margin-bottom: 15px;
     }
-
 
     &::placeholder {
       font-size: 12px;
@@ -48,10 +47,10 @@
 
   &__btn {
     min-width: 100px;
-    background-color: $greyc8;
-    font-size: 14px;
     padding: 7px 19px 7px 16px;
+    font-size: 14px;
     color: $whiteff;
+    background-color: $greyc8;
     border: transparent;
     outline: transparent;
 

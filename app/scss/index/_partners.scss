@@ -1,18 +1,18 @@
 
 .partners {
-  background-color: rgba(#fcd7b6, 0.2);
-  margin-top: -248px;
   padding-top: 245px;
+  margin-top: -248px;
   margin-bottom: 35px;
+  background-color: rgba(#fcd7b6, 0.2);
 
   @include maxw($xl) {
-    margin-top: -60px;
     padding-top: 15px;
+    margin-top: -60px;
     margin-bottom: 0;
   }
 
   @include maxw($md) {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   &__list {
@@ -20,10 +20,10 @@
     padding-bottom: 65px;
 
     @include maxw($xl) {
-      padding-bottom: 20px;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
     }
 
     @include maxw($sm) {
@@ -32,19 +32,19 @@
   }
  
   &__item {
-    margin: 0 50px;
-    height: 120px;
     display: flex;
     align-items: center;
     width: 150px;
+    height: 120px;
+    margin: 0 50px;
 
     @include maxw($xl) {
       padding: 15px;
     }
 
     @include maxw($lg) {
-      height: 100px;
       width: 100px;
+      height: 100px;
     }
   }
    

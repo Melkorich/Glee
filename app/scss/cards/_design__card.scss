@@ -1,21 +1,21 @@
 .design-card {
-  background-color: #f8f8f8;
-  text-align: left;
-  font-family: 'DMSans';
-  font-weight: 700;
   position: relative;
-  transition: background-color 1s, box-shadow 1s;
   width: 370px;
   height: 246px;
   overflow: hidden;
+  font-family: 'DMSans', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  background-color: #f8f8f8;
+  transition: background-color 1s, box-shadow 1s;
 
   @include maxw($lg) {
     margin-right: 0;
   }
 
   @include maxw($sm) {
-    max-width: 370px;
     width: 100%;
+    max-width: 370px;
     height: 220px;
   }
    
@@ -44,9 +44,9 @@
   }
   
   &__type {
+    max-width: 70px;
     color: $greyc8;
     @include line-climp(3);
-    max-width: 70px;
   }
 
   &__box {
@@ -57,15 +57,15 @@
     height: 150px;
 
     @include maxw($lg) {
-      max-width: 250px;
       right: 0;
+      max-width: 250px;
       height: 150px;
     }
 
     @include maxw($sm) {
+      bottom: 20px;
       max-width: 180px;
       height: 100px;
-      bottom: 20px;
     }
   }
 

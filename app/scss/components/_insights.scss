@@ -1,9 +1,9 @@
 .insights {
-
   &__top {
-    @include flexible ();
-    margin-bottom: 46px;
     align-items: baseline;
+    margin-bottom: 46px;
+
+    @include flexible ();
   }
 
   &__link {
@@ -11,23 +11,23 @@
     display: inline-block;
     padding-right: 25px;
 
-    &:after {
-      content:'';
+    &::after {
       position: absolute;
-      background-image:url('../images/icons/right.svg');
+      right: 0;
+      bottom: 5px; 
       width: 7px;
       height: 12px;
+      content: '';
+      background-image: url('../images/icons/right.svg');
+      background-repeat: no-repeat;
       background-size: cover;
-      background-repeat:no-repeat;
-      right: 0px;
-      bottom: 5px; 
     }
   }
 
   &__items {
     display: flex;
-    background-color: transparent;
     margin-bottom: 80px;
+    background-color: transparent;
 
     @include maxw($xl) {
       flex-wrap: wrap;
@@ -51,4 +51,3 @@
     }
   }
 }
-

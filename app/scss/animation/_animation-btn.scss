@@ -6,8 +6,8 @@
   }
 
   &:focus {
-    background-color: $blue72;
     color: $orange-bg;
+    background-color: $blue72;
 
     svg {
       fill: $whiteff;
@@ -15,8 +15,8 @@
   }
 
   &:hover {
-    background-color: $blue4d;
     color: $orange-bg;
+    background-color: $blue4d;
 
     svg {
       fill: $orange-bg;

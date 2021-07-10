@@ -1,24 +1,23 @@
 .lamp-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 870px;
-  width: 100%;
-  min-height: 390px;
-  background-color: #feefe2;
-  padding: 5px 140px 5px 5px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 870px;
+  min-height: 390px;
+  padding: 5px 140px 5px 5px;
+  background-color: #feefe2;
 
   @include maxw($xxl) {
     padding: 5px;
   }
 
   @include maxw($xl) {
+    justify-content: center;
+    max-width: 870px;
     padding: 5px 10px;
     margin: 0 auto;
-    max-width: 870px;
-    justify-content: center;
-
   }
 
   @include maxw($sm) {
@@ -27,42 +26,41 @@
     padding: 5px 0;
   }
 
-  &:before {
-    content:''; 
+  &::before {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    background-image:linear-gradient(to bottom, $orange-bg 25%, $whiteff 100%);
-    background-size: cover;
+    content: ''; 
+    background-image: linear-gradient(to bottom, $orange-bg 25%, $whiteff 100%);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     opacity: 0;
     transition: opacity 0.5s linear;
   }
-
 
   &:hover::before {
     opacity: 1;
   }
 
   &__img-box {
-    margin-right: 70px;
     flex-basis: 250px;
+    margin-right: 70px;
 
     @include maxw($md) {
-      margin: 0 auto;
-      padding: 0;
       flex-basis: 185px;
+      padding: 0;
+      margin: 0 auto;
     }
   }
 
   &__img-link {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
 
     &:hover img {
       transform: translateX(-20px);
@@ -71,18 +69,18 @@
 
   &__image {
     position: absolute;
-    height: 400px;
-    min-width: 230px;
-    bottom: -105px;
     right: -30px;
+    bottom: -105px;
+    min-width: 230px;
+    height: 400px;
     transition: transform 1s;
 
     @include maxw($md) {
-      height: 60%;
+      position: relative;
+      top: 0;
       width: 70%;
       min-width: 100px;
-      top: 0;
-      position: relative;
+      height: 60%;
     }
 
     @include maxw($sm) {
@@ -92,41 +90,41 @@
   }
 
   &__content {
-    text-align: left;
-    width: 370px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
+    width: 370px;
+    text-align: left;
 
     @include maxw($md) {
-      padding: 0 10px;
-      width: 60%;
       align-items: center;
+      width: 60%;
+      padding: 0 10px;
     }
 
     @include maxw($sm) {
-      max-width: 260px;
       width: 100%;
+      max-width: 260px;
     }
   }
 
   &__title {
-    color: $blue4d;
+    max-width: 260px;
+    margin-bottom: 15px;
     font-family: 'DMSans', sans-serif;
     font-size: 26px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 15px;
-    max-width: 260px;
+    color: $blue4d;
     @include line-climp(2);
   }
 
   &__text {
-    color: $blue4d;
+    max-width: 300px; 
+    margin-bottom: 30px;
     font-family: "Rubik", sans-serif;
     line-height: 1.8;
-    margin-bottom: 30px;
-    max-width: 300px; 
+    color: $blue4d;
     @include line-climp(4);
 
     @include maxw($sm) {
@@ -135,12 +133,12 @@
   }
  
   &__link {
+    max-width: 180px;
+    padding: 21px 19px;
+    color: $blue72;
     background-color: transparent;
     border: 1px solid #436372;
-    padding: 21px 19px;
     border-radius: 5px;
-    color: $blue72;
-    max-width: 180px;
 
     svg {
       width: 22px;

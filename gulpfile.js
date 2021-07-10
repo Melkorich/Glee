@@ -9,6 +9,19 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
 const svgSprite = require('gulp-svg-sprite');
+const gulpStylelint = require('gulp-stylelint');
+
+function lintCss(){
+  return src('app/**/*.scss')
+  .pipe(gulpStylelint({
+    reporters: [
+      {
+        formatter: 'string', 
+        console: true
+      }
+    ]
+  }));
+}
 
 
 function htmlInclude() {
@@ -107,11 +120,13 @@ function watching(){
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/images/icons/**.svg'], svgSprites);
   watch(['app/**/*.html']).on('change', browserSync.reload);
+  // watch(['app/**/*.css'], stylelint);
 }
 
 
 exports.styles = styles;
 exports.scripts = scripts;
+exports.lintCss = lintCss;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
@@ -119,4 +134,4 @@ exports.fileinclude = htmlInclude;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(htmlInclude, styles, scripts, svgSprites, browsersync, watching);
+exports.default = parallel(htmlInclude, styles, scripts, lintCss, svgSprites, browsersync, watching);

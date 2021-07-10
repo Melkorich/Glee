@@ -7,8 +7,8 @@
   }
 
   @include maxw($md) {
-    text-align: center;
     justify-content: center;
+    text-align: center;
   }
   
   &__inner {
@@ -21,19 +21,19 @@
   }
 
   &__wrapper {
-    @include flexible ();
     position: relative;
     height: 820px;
+    @include flexible ();
 
     &::before {
-      content:'';
       position: absolute;
-      width: 634px;
-      height: 634px;
       top: 95px;
       right: -90px;
+      width: 634px;
+      height: 634px;
+      content: '';
+      background: linear-gradient(90deg, (transparent) 0%, rgba(255, 255, 255, 1) 100%);
       border-radius: 50%;
-      background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,1) 100%);
     }
 
     @include maxw($xxl) {
@@ -50,10 +50,10 @@
       padding-right: 0;
 
       &::before {
+        top: 90px;
         width: 560px;
         height: 560px;
-        top: 90px;
-        background: linear-gradient(90deg, (transparent) 0%, rgba(255,255,255,0.7) 100%);
+        background: linear-gradient(90deg, (transparent) 0%, rgba(255, 255, 255, 0.7) 100%);
       }
     }
 
@@ -70,14 +70,13 @@
       align-items: center;
       justify-content: center;
       padding: 0;
-
     }
   }
 
   &__content {
+    width: 100%;
     max-width: 470px;
     min-height: 400px;
-    width: 100%;
     overflow: hidden;
     @include line-climp(2);
 
@@ -87,9 +86,9 @@
 
     @include maxw($md) {
       width: 100%;
-      margin: 0 auto;
-      padding: 10px 0;
       min-height: 230px;
+      padding: 10px 0;
+      margin: 0 auto;
     }
 
     @include maxw($sm) {
@@ -99,12 +98,12 @@
 
   &__title {
     max-width: 470px;
+    margin-bottom: 28px;
     font-size: 72px;
     font-weight: 500;
     line-height: 1;
     color: $blue4d;
     text-transform: uppercase;
-    margin-bottom: 28px;
     @include line-climp(3);
 
     @include maxw($xl) {
@@ -124,13 +123,13 @@
   }
 
   &__text {
-    color: $blue72;
+    max-width: 370px;
+    margin-bottom: 37px;
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 37px;
-    max-width: 370px;
-    @include line-climp(4);
+    color: $blue72;
     letter-spacing: 0.2px;
+    @include line-climp(4);
 
     @include maxw($xl) {
       max-width: 360px;
@@ -139,18 +138,18 @@
     @include maxw($md) {
       display: inline-block;
       width: 100%;
-      margin: 0 0 25px 0;
       padding: 0;
+      margin: 0 0 25px 0;
     }
   }
 
   &__img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
     max-width: 630px;
     height: 490px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: relative;
 
     @include maxw($xxl) {
       max-width: 610px;
@@ -169,10 +168,10 @@
   }
 
   &__img {
+    z-index: 6;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    z-index: 6;
 
     @include maxw($xl) {
       width: 90%;
@@ -192,12 +191,12 @@
 
   .slick-dots {
     position: absolute;
+    right: 50%;
+    bottom: 30px;
+    display: flex;
     width: 30px;
     height: 29px;
-    bottom: 30px;
-    right: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
 
     @include maxw($md) {
       bottom: 15px;
@@ -207,21 +206,21 @@
       padding: 0 5px;
 
       button {
-        background-color: $whiteff;
-        opacity: 0.3;
-        border-radius: 50%;
-        border: transparent;
         padding: 10px 12px;
         font-size: 11px;
         font-weight: 500;
         line-height: 1;
+        background-color: $whiteff;
+        border: transparent;
+        border-radius: 50%;
+        opacity: 0.3;
         transition: background-color 0.6s, border 0.6s;
       }
     }
 
-    .slick-active button{
-      opacity: 1;
+    .slick-active button {
       background-color: $whiteff;
+      opacity: 1;
       transition: 0.6s;
 
       &:focus {
@@ -229,13 +228,13 @@
       }
 
       &:hover {
-        background-color: $blue4d;
         color: $whiteff;
+        background-color: $blue4d;
       }
 
       &:active {
-        background-color: rgb(234, 161, 96);
         color: $black1a;
+        background-color: rgb(234, 161, 96);
       }
     }
   }
