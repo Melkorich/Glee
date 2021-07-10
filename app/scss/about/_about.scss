@@ -1,0 +1,344 @@
+
+.mission {
+  &__wrap {
+    display: flex;
+    padding: 120px 0;
+  }
+
+  &__image-box {
+    width: 570px;
+    height: 675px;
+  }
+  
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 80px 0 80px 30px;
+    color: $blue4d;
+  }
+
+  &__years {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__number {
+    margin-right: 22px;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 1;
+    color: $greyc8;
+  }
+
+  &__item {
+    max-width: 300px;
+    line-height: 1.8;
+    @include line-climp(2);
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    max-width: 550px;
+    margin-bottom: 65px;
+    line-height: 1.8;
+    @include line-climp(6);
+  }
+
+  &__score {
+    position: relative;
+    max-width: 530px;
+    padding-top: 40px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 500px;
+      height: 2px;
+      content: '';
+      background-image: url('../../images/about-page/border-top.jpg');
+    }
+  }
+
+  &__score-items {
+    display: flex;
+  }
+
+  &__score-item {
+    position: relative;
+    width: 33.333%;
+    padding: 0 20px 0 65px;
+
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: 11px;
+      width: 45px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: contain;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      top: -5px;
+      right: 0;
+      width: 1px;
+      height: 80px;
+      content: '';
+      background-image: url('../../images/about-page/border-right.jpg');
+    }
+  }
+
+  .mission__score-item--projects {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../../images/icons/about-projects.svg');
+    }
+  }
+
+  .mission__score-item--awards {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../../images/icons/about-awards.svg');
+    }
+  }
+
+  .mission__score-item--revenue {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../../images/icons/about-revenue.svg');
+    }
+  }
+
+  &__score-number {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: 'DMSans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__score-text {
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    color: #4c4c4c;
+  }
+
+  &__statistics {
+    padding: 80px 0;
+    background-color: $orange-bg;
+  }
+
+  &__statistics-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  &__statistics-item {
+    position: relative;
+    flex: 0 1 270px;
+    margin: 0 5px;
+    font-family: 'DMSans', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    color: $blue4d;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 65px;
+      height: 65px;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+      transform: translateX(-50%);
+    }
+  }
+
+  .mission__statistics-item--satisfied {
+    position: relative;
+
+    &::before {
+      background-image: url('../../images/icons/about-satisfied-rate.svg');
+    }
+  }
+
+  .mission__statistics-item--delivered {
+    position: relative;
+
+    &::before {
+      background-image: url('../../images/icons/about-delivered.svg');
+    }
+  }
+
+  .mission__statistics-item--worktime {
+    position: relative;
+
+    &::before {
+      background-image: url('../../images/icons/about-worktime.svg');
+    }
+  }
+
+  .mission__statistics-item--brands {
+    position: relative;
+
+    &::before {
+      background-image: url('../../images/icons/about-brands.svg');
+    }
+  }
+
+  &__statistics-number {
+    display: inline-block;
+    padding-top: 80px;
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+
+  &__statistics-text {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+
+.about-title {
+  margin-bottom: 45px;
+  font-family: 'DMSans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  @include line-climp(2);
+}
+
+.team {
+  padding: 120px 0;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    flex: 0 1 370px;
+    color: $blue4d;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 300px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  &__link {
+    position: relative;
+    padding: 18px 60px 18px 14px;
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      width: 18px;
+      height: 7px;
+      content: '';
+      background-image: url('../../images/icons//arrow-right-white1.svg');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__gallery-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 30px;
+  }
+
+  .team-card {
+    position: relative;
+    max-width: 370px;
+    height: 380px;
+
+    &__image-box {
+      width: 370px;
+      height: 320px;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 320px;
+      padding: 27px 22px;
+      background-color: $whiteff;
+      box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.2);
+    }
+
+    &__person {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name {
+      margin-bottom: 10px;
+      font-family: 'DMSans', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      color: $blue4d;
+    }
+
+    &__position {
+      line-height: 1.8;
+      color: #565872;
+    }
+
+    &__links {
+      display: flex;
+
+      img {
+        width: 50px;
+        height: 41px;
+        padding: 0 4px;
+      }
+    } 
+  }
+} 
