@@ -9,8 +9,9 @@
     "at-rule-empty-line-before": null,
     "declaration-block-semicolon-newline-after": null,
     "block-closing-brace-newline-before": null,
+    "selector-list-comma-newline-after": null,
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["include", "mixin", "function", "return"]
+      "ignoreAtRules": ["include", "mixin", "function", "return", "extend"]
     }],
     "indentation": [
       2,
