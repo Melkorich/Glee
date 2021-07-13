@@ -8,13 +8,15 @@ $(document).ready(function(){
   
 $(function(){
 
+  $('.select-style').styler();
+
   $(".star").rateYo({
     starWidth: "13px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
     readOnly: true
   });
-
+ 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",

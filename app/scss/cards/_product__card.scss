@@ -21,10 +21,10 @@
     transition: transform 0.3s;
     transform: translateY(250%);
 
-    @include maxw($lg) {
-      bottom: 100px;
-      transform: translateY(0);
-    }
+    // @include maxw($lg) {
+    //   bottom: 100px;
+    //   transform: translateY(0);
+    // }
   }
 
   &:hover {
@@ -37,9 +37,9 @@
     }
   }
  
-  @include maxw($lg) {
-    position: relative;
-  }
+  // @include maxw($lg) {
+  //   position: relative;
+  // }
 
   @include maxw($md) {
     padding: 10px;
@@ -53,9 +53,9 @@
     margin-bottom: 60px;
     overflow: hidden;
 
-    @include maxw($lg) {
-      position: static;
-    }
+    // @include maxw($lg) {
+    //   position: static;
+    // }
   }
 
   &__img {
@@ -69,11 +69,11 @@
     margin-right: 16px;
   }
 
-  &__item a {
-    @include maxw($lg) {
-      background-color: rgba(248, 235, 223, 0.9);
-    }
-  }
+  // &__item a {
+  //   @include maxw($lg) {
+  //     background-color: rgba(248, 235, 223, 0.9);
+  //   }
+  // }
 
   &__link {
     width: 45px;
