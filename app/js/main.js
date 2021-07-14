@@ -8,6 +8,19 @@ $(document).ready(function(){
   
 $(function(){
 
+  $('.product-content__filter-btn').on('click', function() {
+    $('.product-content__filter-btn').removeClass('product-content__filter-btn--active');
+    $(this).addClass('product-content__filter-btn--active');
+  });
+
+  $('.button-list').on('click', function() {
+    $('.product-card').addClass('product-card--list');
+  });
+
+  $('.button-grid').on('click', function() {
+    $('.product-card').removeClass('product-card--list');
+  });
+
   $('.select-style').styler();
 
   $(".star").rateYo({

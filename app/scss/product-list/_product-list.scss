@@ -254,7 +254,7 @@
     justify-content: space-between;
     max-width: 120px;
   }
-
+ 
   &__filter-btn {
     width: 37px;
     height: 32px;
@@ -266,6 +266,16 @@
       path {
         fill: $orange-bg;
       }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .product-card {
+      margin-bottom: 40px;
     }
   }
 }
