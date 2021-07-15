@@ -126,3 +126,36 @@ body {
     color: inherit;
   }
 } 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 0 0;
+  align-items: center;
+  color: $blue4d;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__link--active {
+    background-color: $greyc8;
+  }
+
+  .pagin {
+    padding: 13px 20px;
+    border: 1px solid $greyc8;
+    margin: 0 7.5px;
+  }
+
+  a {
+    transition: background-color 1s;
+  }
+
+  a:hover {
+    background-color: $greyc8;
+  }
+}
