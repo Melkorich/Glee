@@ -18,6 +18,7 @@
 @import "animation/animation";
 @import "animation/animation-cards";
 @import "animation/circle-animation";
+@import "animation/animation-btn";
 
 /* home page */
 @import "index/main-slider";
@@ -43,3 +44,6 @@
 
 /* terms and conditions */
 @import "terms/terms";
+
+/* product list */
+@import "product-list/product-list";

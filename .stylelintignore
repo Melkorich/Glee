@@ -1,3 +1,5 @@
 /app/scss/style.scss
 
+no-descending-specificity
+
 stylelint-disable indentation

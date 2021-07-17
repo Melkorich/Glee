@@ -8,6 +8,41 @@ $(document).ready(function(){
   
 $(function(){
 
+  $('.product-content__filter-btn').on('click', function() {
+    $('.product-content__filter-btn').removeClass('product-content__filter-btn--active');
+    $(this).addClass('product-content__filter-btn--active');
+  });
+
+  $('.button-list').on('click', function() {
+    $('.product-card').addClass('product-card--list');
+  });
+
+  $('.button-grid').on('click', function() {
+    $('.product-card').removeClass('product-card--list');
+  });
+
+  $('.select-style').styler();
+
+  $(".star").rateYo({
+    starWidth: "13px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+  });
+ 
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
+
   $(window).scroll(function(){
     if ($(document).scrollTop() > 50) {
       $(".header").addClass("header--scroll");
