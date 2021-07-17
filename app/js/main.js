@@ -27,7 +27,7 @@ $(function(){
     starWidth: "13px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
-    readOnly: true
+    readOnly: true,
   });
  
   $('.filter-price__input').ionRangeSlider({

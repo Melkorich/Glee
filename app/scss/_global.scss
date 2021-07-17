@@ -129,9 +129,9 @@ body {
 
 .pagination {
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: 100px 0 0 0;
-  align-items: center;
   color: $blue4d;
 
   &__list {
@@ -147,8 +147,8 @@ body {
 
   .pagin {
     padding: 13px 20px;
-    border: 1px solid $greyc8;
     margin: 0 7.5px;
+    border: 1px solid $greyc8;
   }
 
   a {
