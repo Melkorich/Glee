@@ -2,4 +2,6 @@
 
 no-descending-specificity
 
+order/properties-order
+
 stylelint-disable indentation
