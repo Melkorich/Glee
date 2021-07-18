@@ -1,16 +1,16 @@
-// .partners--product {
-//   padding: 80px 0;
-//   margin-top: 0;
-// }
-
-// .partners__list--product {
-//   padding: 0;
-//   margin: 0;
-// } 
-
 .product-list {
   padding: 120px 0;
 
+  & + div.partners--product {
+    padding: 80px 0;
+    margin-top: 0;
+
+    .partners__list--product {
+      padding: 0;
+      margin: 0;
+    } 
+  }
+ 
   &__inner {
     display: flex;
   }
