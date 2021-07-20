@@ -1,0 +1,27 @@
+.blog__item-quote {
+  border-left: 6px solid $greyc8;
+  background-color: rgba($greyc8, 0.4);
+  padding: 20px 40px;
+  margin-bottom: 35px;
+
+  cite {
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  span {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  span::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $blue4d;
+  }
+}
