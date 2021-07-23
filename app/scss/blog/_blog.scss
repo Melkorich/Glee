@@ -1,0 +1,149 @@
+.blog {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 830px;
+    margin-right: 70px;
+
+    .pagination {
+     justify-content: flex-start;
+     padding-top: 20px;
+    }
+  }
+
+  &__aside {
+    width: 270px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  .blog-item__img-box {
+    position: relative;
+    width: 830px;
+    height: 500px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .blog-item__data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 27px 20px;
+    background-color: $greyc8;
+    max-width: 275px;
+    color: $whiteff;
+    font-size: 12px;
+
+    div.blog-item__data {
+      padding: 27px 20px;
+    }
+
+    .insights-card__data-link--date {
+      margin-right: 29px;
+    }
+  }
+
+  .blog__item-title {
+    padding: 30px 0 25px;
+    font-size: 36px;
+    color: #333;
+    line-height: 1;
+    font-weight: 300;
+    @include line-climp (2);
+  }
+
+  & + div.partners--product {
+    padding: 80px 0;
+    margin-top: 0;
+
+    .partners__list--product {
+      padding: 0;
+      margin: 0;
+    } 
+  }
+
+  .blog__item-text {
+    color: $blue4d;
+    margin-bottom: 35px;
+
+    p {
+      line-height: 1.8;
+      @include line-climp (5);
+    }
+  }
+}
+
+.recent-posts {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  &__img-box {
+    min-width: 70px;
+    height: 70px;
+    margin-right: 17px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recent-posts__data {
+    border-top: none;
+    color: #9a9a9a;
+  }
+}
+
+.filter-search {
+  margin-bottom: 50px;
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    border: 1px solid rgba($greyc8, 0.4);
+    border-radius: 5px 0 0 5px;
+    display: inline-block;
+    padding: 15px 5px 15px 15px;
+    height: 41px;
+    width: 220px;
+    outline: transparent;
+
+    &::placeholder {
+      color: $blue4d;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 48px;
+    height: 41px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($greyc8, 0.4);
+    border: transparent;
+  }
+}

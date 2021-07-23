@@ -11,7 +11,6 @@
 
 
 
- 
 <body>
   
   <header class="header">
@@ -85,10 +84,10 @@
 </header> 
 
   <main class="main">
-    <h1 class="sr-only">Glee log in page</h1>
-
+    <h1 class="sr-only">Glee furniture shop</h1>
+    
     <div class="breadcrumbs">
-      <h2 class="breadcrumbs__title">Log in</h2>
+      <h2 class="breadcrumbs__title">Contact</h2>
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">
@@ -96,45 +95,99 @@
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <span class="breadcrumbs__link" href="#">
-            Log in
-          </span>
+          <a class="breadcrumbs__link" href="#">
+            Contacts
+          </a>
         </li>
       </ul>
     </div>
-
-
-    <div class="modal">
+ 
+    <section class="contacts">
       <div class="container">
-       <form class="modal__form" action="#">
-  <label class="modal__label">
-    Username or email address *
-    <input class="modal__input" type="text" required>
-  </label>
-  <label class="modal__label">
-    Password *
-    <input class="modal__input" type="password" required>
-  </label>
+        <div class="contacts-top">
+          <span class="contacts__subtitle">Write Here</span>
+          <h2 class="contacts__title">Get In Touch</h2>
+     
+          <ul class="contacts__info-list">
+            <li class="contacts__info-item">
+              <a class="contacts__info-link" href="#">
+                <img src="images/contacts/1.png" alt="icon">
+                <h3 class="contacts__info-title">Address</h3>
+                <div class="contacts__info-text">
+                  <p>
+                    2416 Mapleview Drive
+                  </p>
+                  <p>
+                    Tampa, FL 33634
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="contacts__info-item">
+              <a class="contacts__info-link" href="#">
+                <img src="images/contacts/2.png" alt="icon">
+                <h3 class="contacts__info-title">Address</h3>
+                <div class="contacts__info-text">
+                  <p>
+                    2416 Mapleview Drive
+                  </p>
+                  <p>
+                    Tampa, FL 33634
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="contacts__info-item">
+              <a class="contacts__info-link" href="#">
+                <img src="images/contacts/3.png" alt="icon">
+                <h3 class="contacts__info-title">Address</h3>
+                <div class="contacts__info-text">
+                  <p>
+                    2416 Mapleview Drive
+                  </p>
+                  <p>
+                    Tampa, FL 33634
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-  <button class="modal__btn" type="submit">
-    Login
-  </button>
+        <div class="contacts__form">
+          <form class="comments-form contacts-form" action="#">
+            <div class="comments-form__box-input">
 
-  <div class="modal__remember">
-    <label class="modal__label">
-      <input class="modal__checkbox" type="checkbox">
-      Remember me
-    </label>
-    <a class="modal__link" href="#">Lost your password?</a>
-  </div>
+              <span class="comments-form__text-input--name contacts-form__input-name">
+                <input class="comments-form__text-input contacts-input" type="text" placeholder="Name" required>
+              </span>
+            
+              
+              <span class="comments-form__text-input--email">
+                <input class="comments-form__text-input contacts-input" type="text" placeholder="youremail@gmail.com" name="email" required>
+              </span>
+        
+            </div>
+               
+            <span class="comments-form__textarea-icon">
+              <textarea class="comments-form__textarea" placeholder="Comment"></textarea>
+            </span>
+            <button class="comments-form__btn contcats-form__btn main-link">
+             Send Message
+            </button>
+          </form>
 
-  <p class="modal__question">Not registered? No problem</p>
-  <a class="modal__link modal__link--create main-link" href="#">Create an account</a>
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60531.156799361066!2d-95.37146617338098!3d29.741062891994456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2z0KXRjNGO0YHRgtC-0L0sINCi0LXRhdCw0YEsINCh0KjQkA!5e1!3m2!1sru!2sru!4v1627072651838!5m2!1sru!2sru" width="500" height="330" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
 
-</form>
+          <div class="map">
+            <div id="map"></div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
     
+
     <section class="insights">
   <div class="container">
     <div class="insights__top">
@@ -228,7 +281,6 @@
     </ul>
   </div>
 </section> 
- 
     <div class="partners partners--product">
   <div class="container">
     <ul class="partners__list partners__list--product">
@@ -250,6 +302,8 @@
     </ul>
   </div>
 </div> 
+ 
+
 
   </main>
 
@@ -375,6 +429,11 @@
 </footer>
   
   <script src="js/main.min.js"></script>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+    async>
+  </script>
 
 </body>
 </html>
